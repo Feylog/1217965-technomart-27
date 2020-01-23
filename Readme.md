@@ -1,7 +1,7 @@
 # Личный проект «Техномарт»
 
 * Студент: [Владимир Агаджанов](https://up.htmlacademy.ru/htmlcss/27/user/1217965).
-* Наставник: [Вадим Новаш].(https://htmlacademy.ru/profile/stakeout)
+* Наставник: [Вадим Новаш](https://htmlacademy.ru/profile/stakeout)
 
 ---
 
