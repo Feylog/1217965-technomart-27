@@ -2,142 +2,154 @@ doctype
 html(lang="ru")
   head
     meta(charset="utf-8")
-    title HTML Academy: Техномарт
+    link(rel="stylesheet", href="css/style.css")
+    title HTML Academy: Техномарт Каталог
   body
-    header
-      .logo техномарт
+    .wrapper
+      header.header
+        .logo техномарт
         .search Поиск:
         .bookmarks Закладки: 0
-        .mart Корзина: 0
+        .mart Корзина: 10
         .order Оформить заказ
-      section
-        h2 главные данные
-        p Интернет-магазин строительных материалов и инструментов для ремонта
-        p
+        section
+          h2 главные данные
+          p Интернет-магазин
+          p строительных материалов
+          p и инструментов для ремонта
           a(href="tel:") +7 (812) 555-05-55
-        p . Санкт-петербург, ул. Б. Конюшенная, д. 19/8
-        button(type='submit') Равшан Джамшутович
-        ul
-          li
-            a(href="") Мои Заказы
-          li
-            a(href="") Личный кабинет
-        nav
+          p г. Санкт-петербург, ул. Б. Конюшенная, д. 19/8
+          a(href="customer.html") Равшан Джамшутович
           ul
             li
-              a(href="index.html") Главная
+              a(href="") Мои Заказы
+            li
+              a(href="") Личный кабинет
+          nav
+            ul
+              li
+                a(href="index.html") Главная
+              li
+                a(href="") Компания
+              li
+                a.current Каталог
+              li
+                a(href="") Новости
+              li
+                a(href="") Спецпредложения
+              li
+                a(href="") Доставка
+              li
+                a(href="") Контакты
+      main.main
+        ul
+          li
+            img(src="", alt="home")
+          li
+            a(href="#") Каталог 
+          li
+            a(href="") Инструмент
+          li
+            a.current Перфораторы
+        h2 Перфораторы
+        section
+          form(action="" method="post")
+            fieldset
+              legend
+                .choose_filter
+                  label(for="") Производители:
+                    input(type="checkbox", name="manufacturer")
+                    label bosch
+                    input(type="checkbox", name="manufacturer") 
+                    label интерскол
+                    input(type="checkbox", name="manufacturer") 
+                    label makita
+                    input(type="checkbox", name="manufacturer") 
+                    label dewalt
+                    input(type="checkbox", name="manufacturer") 
+                    label hitachi
+            fieldset
+              legend
+                .choose_filter
+                  label(for="") питание:
+                    input(type="radio", name="charge") 
+                    label аккумуляторные
+                    input(type="radio", name="charge") 
+                    label сетевые
+            button(type="submit") Показать
+          ul
+            li
+              img(src="", alt="")
+              h3 Перфоратор BOSCH BFG 3000
+              p 22500 Р.
+              a(href="") 15500 Р.
+            li
+              img(src="", alt="")
+              h3 Перфоратор BOSCH BFG 6000
+              p 30500 Р.
+              a(href="") 25500 Р.
+            li
+              img(src="", alt="")
+              h3 Перфоратор BOSCH BFG 2000
+              a(href="")
+            li
+              img(src="", alt="")
+              h3 Перфоратор BOSCH BFG 3000
+              p 22500 Р.
+              a(href="") 15500 Р.
+            li
+              img(src="", alt="")
+              h3 Перфоратор BOSCH BFG 6000
+              p 30500 Р.
+              a(href="") 25500 Р.
+            li
+              img(src="", alt="")
+              h3 Перфоратор BOSCH BFG 2000
+              a(href="")
+            li
+              img(src="", alt="")
+              h3 Перфоратор BOSCH BFG 3000
+              p 22500 Р.
+              a(href="") 15500 Р.
+            li
+              img(src="", alt="")
+              h3 Перфоратор BOSCH BFG 6000
+              p 30500 Р.
+              a(href="") 25500 Р.
+            li
+              img(src="", alt="")
+              h3 Перфоратор BOSCH BFG 2000
+              a(href="") 12500 Р.
+        section
+      footer.footer
+        .footer_top
+          .footer_logo Техномарт
+          ul
             li
               a(href="") Компания
             li
-              a.current Каталог
-            li
               a(href="") Новости
             li
-              a(href="") Спецпредложения
+              a(href="catalog.html") Каталог
             li
               a(href="") Доставка
             li
               a(href="") Контакты
-    main
-      ul
-        li
-          img(src="", alt="home")
-        li
-          a(href="#") Каталог 
-        li
-          a(href="") Инструмент
-        li
-          a Перфораторы
-      h2 Перфораторы
-      section
-        form(action="" method="method")
-          fieldset
-            legend
-          p Производители:
-          ul
-            li bosch
-            li интерскол
-            li makita
-            li dewalt
-            li hitachi
-          p питание:
-          ul
-            li аккумуляторные
-            li сетевые
-          button(type='submit') Показать
-        ul
-          li
-            img(src="", alt="")
-            h3 Перфоратор BOSCH BFG 3000
-            p 22500 Р.
-            a(href="") 15500 Р.
-          li
-            img(src="", alt="")
-            h3 Перфоратор BOSCH BFG 6000
-            p 30500 Р.
-            a(href="") 25500 Р.
-          li
-            img(src="", alt="")
-            h3 Перфоратор BOSCH BFG 2000
-            a(href="")
-          li
-            img(src="", alt="")
-            h3 Перфоратор BOSCH BFG 3000
-            p 22500 Р.
-            a(href="") 15500 Р.
-          li
-            img(src="", alt="")
-            h3 Перфоратор BOSCH BFG 6000
-            p 30500 Р.
-            a(href="") 25500 Р.
-          li
-            img(src="", alt="")
-            h3 Перфоратор BOSCH BFG 2000
-            a(href="")
-          li
-            img(src="", alt="")
-            h3 Перфоратор BOSCH BFG 3000
-            p 22500 Р.
-            a(href="") 15500 Р.
-          li
-            img(src="", alt="")
-            h3 Перфоратор BOSCH BFG 6000
-            p 30500 Р.
-            a(href="") 25500 Р.
-          li
-            img(src="", alt="")
-            h3 Перфоратор BOSCH BFG 2000
-            a(href="") 12500 Р.
-      section
-    footer
-      .footer_top
-        .footer_logo Техномарт
-        ul
-          li
-            a(href="") Компания
-          li
-            a(href="") Новости
-          li
-            a(href="catalog.html") Каталог
-          li
-            a(href="") Доставка
-          li
-            a(href="") Контакты
-      .footer_middle
-        p г. Санкт-петербург, ул. Б. Конюшенная, д. 19/8
-        a(href="tel:") +7 (812) 555-05-55 
-        ul 
-          li
-            a(href="") Материалы
-          li
-            a(href="") Техника
-          li
-            a(href="") Инструмент
-          li
-            a(href="") Спецпредложения
-      .footer_bottom
-        p © 2010-2017 Компания "Техномарт" Все права защищены
-        img(src="", alt="alt")
-        p Обратная связь
-        a(href="mailto:") mail@htmlacademy.ru
-        p Разработано htmlacademy.ru
+        .footer_middle
+          p г. Санкт-петербург, ул. Б. Конюшенная, д. 19/8
+          a(href="tel:") +7 (812) 555-05-55 
+          ul 
+            li
+              a(href="") Материалы
+            li
+              a(href="") Техника
+            li
+              a(href="") Инструмент
+            li
+              a(href="") Спецпредложения
+        .footer_bottom
+          p © 2010-2017 Компания "Техномарт" Все права защищены
+          img(src="", alt="alt")
+          p Обратная связь
+          a(href="mailto:") mail@htmlacademy.ru
+          p Разработано htmlacademy.ru
