@@ -4,23 +4,26 @@ html(lang="ru")
     meta(charset="utf-8")
     link(rel="stylesheet", href="css/style.css")
     title HTML Academy: Техномарт Главная
-  body
-    .wrapper
-      header.header
-        .logo техномарт
-        .search Поиск:
-        .bookmarks Закладки: 0
-        .mart Корзина: 0
-        .order Оформить заказ
-        section
+  body.page
+    header.page-header
+      .container
+        .top-row
+          .logo-top техномарт
+            img(src="", alt="alt")
+          .search Поиск:
+          .bookmarks Закладки:
+            span 0
+          .mart Корзина:
+            span 0
+          .order Оформить заказ
+        .middle-row
           h2 главные данные
-          p Интернет-магазин
-          p строительных материалов
-          p и инструментов для ремонта
-          a(href="tel:") +7 (812) 555-05-55
+          p Интернет-магазин строительных материалов и инструментов для ремонта
+          a(href="tel:+78125550555")
           p г. Санкт-петербург, ул. Б. Конюшенная, д. 19/8
           a(href="login.html") Войти
           a(href="registration.html") Регистриция
+        .bottom-row
           nav
             ul
               li
@@ -37,26 +40,25 @@ html(lang="ru")
                 a(href="") Доставка
               li
                 a(href="") Контакты
-      main
-        section
-          h2 Компания "Техномарт"
-          p Настоящий мужской шопинг начинается здесь! огромный выбор товаров для ремонта и
-          p строительства не оставит равнодушным любителей сэкономить на гастарбайтерах. 
-          p Мы можемдоставить ваш товар в самые отдельные точки России!
-          p Техномарт работает со многими ранспортными компаниями:
-          ul
-            li Деловые линии
-            li Автотрейдинг
-            li ЖелДорЭкспедиция
-          a(href="about.html") Подробнее о компании 
-        section
-          h2 Контакты
-          p можете выбрать товар сами, заехав в наш офис:
-          iframe(src="https://yandex.ru/map-widget/v1/?um=constructor%3Af7942402afd77c97127f6b87a4f2f23d35437ba63bd0ca024083946f659745f8&amp;source=constructor" width="300" height="158" frameborder="0")
-          button(type="submit") Заблудились? Напишите нам!
-      footer
-        .footer_top
-          .footer_logo Техномарт
+    main.content
+      .company
+        h2 Компания "Техномарт"
+        p Настоящий мужской шопинг начинается здесь! огромный выбор товаровдля ремонта и строительства не оставит равнодушным любителей сэкономить на гастарбайтерах. 
+        p Мы можемдоставить ваш товар в самые отдельные точки России! Техномарт работает со многими ранспортными компаниями:
+        ul
+          li Деловые линии
+          li Автотрейдинг
+          li ЖелДорЭкспедиция
+        a(href="about.html") Подробнее о компании 
+      .contacts
+        h2 Контакты
+        p можете выбрать товар сами, заехав в наш офис:
+        iframe(src="https://yandex.ru/map-widget/v1/?um=constructor%3Af7942402afd77c97127f6b87a4f2f23d35437ba63bd0ca024083946f659745f8&amp;source=constructor" width="300" height="158" frameborder="0")
+        button(type="submit") Заблудились? Напишите нам!
+    footer.page-footer
+      .container
+        .top-row
+          .logo-bottom Техномарт
           ul
             li
               a(href="") Компания
@@ -68,9 +70,9 @@ html(lang="ru")
               a(href="") Доставка
             li
               a(href="") Контакты
-        .footer_middle
+        .middle-row
           p г. Санкт-петербург, ул. Б. Конюшенная, д. 19/8
-          a(href="tel:") +7 (812) 555-05-55 
+          a(href="tel:+78125550555")
           ul 
             li
               a(href="") Материалы
@@ -80,9 +82,9 @@ html(lang="ru")
               a(href="") Инструмент
             li
               a(href="") Спецпредложения
-        .footer_bottom
+        .bottom-row
           p © 2010-2017 Компания "Техномарт" Все права защищены
           img(src="", alt="alt")
           p Обратная связь
-          a(href="mailto:") mail@htmlacademy.ru
+          a(href="mailto:mail@htmlacademy.ru") 
           p Разработано htmlacademy.ru
