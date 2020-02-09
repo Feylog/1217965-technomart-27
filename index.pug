@@ -2,7 +2,6 @@ doctype
 html(lang="ru")
   head
     meta(charset="utf-8")
-    link(rel="stylesheet", href="")
     link(rel="stylesheet", href="css/style.css")
     title HTML Academy: Техномарт Главная
   body.page
@@ -12,172 +11,160 @@ html(lang="ru")
           .logo-top
             img(src="", alt="alt")
           .search
-            form(action="" method="method")
+            form(action="search.html" method="get")
               input(type="text" placeholder="Поиск:")
-              button
+              button(type="submit")
           .bookmarks Закладки:
             span 0
-          .mart Корзина:
+          .cart Корзина:
             span 0
           .order Оформить заказ
         .middle-row
-          .middle-row-text
+          .slogan
             h2 главные данные
             p Интернет-магазин строительных материалов и инструментов для ремонта
-          .middle-row-address
+          .address
             a(href="tel:+78125550555") +7 (812) 555-05-55
             p г. Санкт-петербург, ул. Б. Конюшенная, д. 19/8
-          .middle-row-authorization
+          .authorization
             a(href="login.html") Войти
             a(href="registration.html") Регистриция
-        nav
-          ul
-            li
+        nav.navigation
+          ul.navigation-list
+            li.navigation-item
               a.current Главная
-            li
-              a(href="") Компания
-            li
-              a(href="catalog.html") Каталог
-            li
-              a(href="") Новости
-            li
-              a(href="") Спецпредложения
-            li
-              a(href="") Доставка
-            li
-              a(href="") Контакты
+            li.navigation-item
+              a.navigation-link(href="") Компания
+            li.navigation-item
+              a.navigation-link(href="catalog.html") Каталог
+            li.navigation-item
+              a.navigation-link(href="") Новости
+            li.navigation-item
+              a.navigation-link(href="") Спецпредложения
+            li.navigation-item
+              a.navigation-link(href="") Доставка
+            li.navigation-item
+              a.navigation-link(href="") Контакты
     main.content
-      .content-topics
-        .topic-item
-          h3
-          a(href="")
-          img(src="", alt="")
-        .topic-item
-          h3
-          a(href="")
-          img(src="", alt="")
-        .topic-item
-          h3
-          a(href="")
-          img(src="", alt="")
-        .slider
-          input(type="radio" name="respond" id="desktop" checked)
-          article(id="slide")
-            input(type="radio", name="slide" id="switch0" checked)
-            input(type="radio", name="slide" id="switch1")
-            div(id="slides")
-              div(id="overflow")
-                .image
-                  article
-                    .topic-item-slide
-                      h3 Перфораторы
-                      p Настоящие мужские игрушки
-                      a(href="catalog.html")
-                      img(src="", alt="")
-                  article
-                    .topic-item-slide
-                      h3 Дрели
-                      p Соседям на радость!
-                      a(href="catalog.html")
-                      img(src="", alt="")
-            div(id="controls")
-              label(for="switch0")
-              label(for="switch1")
-            div(id="active")
-              label(for="switch0")
-              label(for="switch1")
-        .topic-item
-          h3
-          a(href="")
-          img(src="", alt="")
-      .content-products
-        .popular-goods
+      section.categories
+        .left-category
+          .item.material
+            h3
+            a(href="")
+          .item.tool
+            h3
+            a(href="")
+          .item.slider
+            .slider-item
+              h3 Перфораторы
+              p Настоящие мужские игрушки
+              a(href="catalog.html")
+            .slider-item
+              h3 Дрели
+              p Соседям на радость!
+              a(href="catalog.html")
+            .controls
+            button
+            button
+        .right-category
+          .item.technic
+            h3
+            a(href="")
+          .item.sale
+            h3
+            a(href="")
+          .item.delivery
+            h3
+            a(href="")
+      section.popular-products
+        header.popular-goods
           h3 Популярные товары:
           a(href="") все популярные товары
         .goods
           .goods-item
             a(href="")
               img(src="", alt="")
-            h3 Перфоратор BOSCH BFG 9000
-            p 32500 Р.
-            p 25500 Р.
+            h3.title Перфоратор BOSCH BFG 9000
+            s.old-price 32500 Р.
+            p.price 25500 Р.
           .goods-item
             a(href="")
               img(src="", alt="")
-            h3 Перфоратор BOSCH BFG 3000
-            p 22500 Р.
-            p 15500 Р.
+            h3.title Перфоратор BOSCH BFG 3000
+            s.old-price 22500 Р.
+            p.price 15500 Р.
           .goods-item
             a(href="")
               img(src="", alt="")
-            h3 Перфоратор BOSCH BFG 6000
-            p 30500 Р.
-            p 25500 Р.
+            h3.title Перфоратор BOSCH BFG 6000
+            s.old-price 30500 Р.
+            p.price 25500 Р.
           .goods-item
             a(href="")
               img(src="", alt="")
-            h3 Перфоратор BOSCH BFG 2000
-            p 12500 Р.
+            h3.title Перфоратор BOSCH BFG 2000
+            p.price 12500 Р.
         .popular-manufacturer
           h3 Популярные Производители:
           a(href="") все производители
         .manufacturers
-          .manufacturer-item
+          .manufacturers-item
             a(href="")
               img(src="", alt="")
-          .manufacturer-item
+          .manufacturers-item
             a(href="")
               img(src="", alt="")
-          .manufacturer-item
+          .manufacturers-item
             a(href="")
               img(src="", alt="")
-          .manufacturer-item
+          .manufacturers-item
             a(href="")
               img(src="", alt="")
-          .manufacturer-item
+          .manufacturers-item
             a(href="")
               img(src="", alt="")
-          .manufacturer-item
+          .manufacturers-item
             a(href="")
               img(src="", alt="")
-          .manufacturer-item
+          .manufacturers-item
             a(href="")
               img(src="", alt="")
-          .manufacturer-item
+          .manufacturers-item
             a(href="")
               img(src="", alt="")            
       .content-services
         .service
           h3 Сервисы
           p Хороший интернет-магазин отличается от плохого не только ценами! Мы стараемся изо всех сил, чтобы сделать ваши покупки приятными.
-          .service-items-list
-            ul.service-list
-              li.service-item1
+          .wrapper
+            ul.service-tab-nav
+              li.service-tab-item(data-name="1")
               a(href="") Доставка
-              li.service-item2 Гарантия
-              li.service-item3 Кредит
-          .service-items-description1
-          h3 Доставка
-          p Мы с удовольствием доставим ваш товар прямо к вашему подъезду совершенно бесплатно! Ведь мы неплохо заработаем, поднимая его на ваш этаж!
-          img(src="", alt="")
-          .service-items-description2
-          h3 Гарантия
-          p Если купленный у нас товар поломается или заискрит, а также в случае пожара, спровоцированного его возгоранием,  вы всегда можете быть уверены в нашей гарантии. Мы обменяем сгоревший товар на новый. Дом уж восстановите как-нибудь сами.
-          img(src="", alt="")
-          .service-items-description3
-          h3 Кредит
-          p Залезть в долговую яму стало проще! Кредитные консультанты придут вам на помощь.
-          a(href="") ОТПРАВИТЬ ЗАЯВКУ
-          img(src="", alt="")
+              li.service-tab-item(data-name="2") Гарантия
+              li.service-tab-item(data-name="3") Кредит
+            .service-tab-content
+              .service-tab-item
+                h3 Доставка
+                p Мы с удовольствием доставим ваш товар прямо к вашему подъезду совершенно бесплатно! Ведь мы неплохо заработаем, поднимая его на ваш этаж!
+                img(src="", alt="")
+              .service-tab-item
+                h3 Гарантия
+                p Если купленный у нас товар поломается или заискрит, а также в случае пожара, спровоцированного его возгоранием,  вы всегда можете быть уверены в нашей гарантии. Мы обменяем сгоревший товар на новый. Дом уж восстановите как-нибудь сами.
+                img(src="", alt="")
+              .service-tab-item
+                h3 Кредит
+                p Залезть в долговую яму стало проще! Кредитные консультанты придут вам на помощь.
+                a(href="") отправить заявку
+                img(src="", alt="")
       .content-about
         .company
           h2 Компания "Техномарт"
-          p Настоящий мужской шопинг начинается здесь! огромный выбор товаровдля ремонта и строительства не оставит равнодушным любителей сэкономить на гастарбайтерах. 
-          p Мы можемдоставить ваш товар в самые отдельные точки России! Техномарт работает со многими ранспортными компаниями:
-          ul
-            li Деловые линии
-            li Автотрейдинг
-            li ЖелДорЭкспедиция
+          p.company-text Настоящий мужской шопинг начинается здесь! огромный выбор товаровдля ремонта и строительства не оставит равнодушным любителей сэкономить на гастарбайтерах. 
+          p.company-text Мы можемдоставить ваш товар в самые отдельные точки России! Техномарт работает со многими ранспортными компаниями:
+          ul.partners
+            li.partner Деловые линии
+            li.partner Автотрейдинг
+            li.partner ЖелДорЭкспедиция
           a(href="about.html") Подробнее о компании 
         .contacts
           h2 Контакты
@@ -189,7 +176,7 @@ html(lang="ru")
         .top-row
           .logo-bottom
             img(src="", alt="alt")
-          ul.link1
+          ul.footer-nav
             li
               a(href="") Компания
             li
@@ -203,7 +190,7 @@ html(lang="ru")
         .middle-row
           p г. Санкт-петербург, ул. Б. Конюшенная, д. 19/8
             a(href="tel:+78125550555") +7 (812) 555-05-55
-          ul.link2
+          ul.footer-category
             li
               a(href="") Материалы
             li
@@ -217,4 +204,4 @@ html(lang="ru")
           img(src="", alt="alt")
           p Обратная связь
           a(href="mailto:mail@htmlacademy.ru") mail@htmlacademy.ru
-          a(href="https://htmlacademy.ru/intensive/htmlcss") Разработано htmlacademy.ru
+          a(href="https://htmlacademy.ru/intensive/htmlcss" target="_blank") Разработано htmlacademy.ru

@@ -11,91 +11,95 @@ html(lang="ru")
           .logo-top
             img(src="", alt="alt")
           .search
-            form(action="" method="method")
+            form(action="search.html" method="get")
               input(type="text" placeholder="Поиск:")
-              button
+              button(type="submit")
           .bookmarks Закладки:
             span 0
           .mart Корзина:
             span 10
           .order Оформить заказ
         .middle-row
-          .middle-row-text
+          .slogan
             h2 главные данные
             p Интернет-магазин строительных материалов и инструментов для ремонта
-          .middle-row-address
+          .address
             a(href="tel:+78125550555") +7 (812) 555-05-55
             p г. Санкт-петербург, ул. Б. Конюшенная, д. 19/8
-          .middle-row-authorization
+          .authorization
             a(href="customer.html") Равшан Джамшутович
             ul
               li
                 a(href="") Мои Заказы
               li
                 a(href="") Личный кабинет
-        nav
-          ul
-            li
-              a(href="index.html") Главная
-            li
-              a(href="") Компания
-            li
+        nav.navigation
+          ul.navigation-list
+            li.navigation-item
+              a.navigation-link(href="index.html") Главная
+            li.navigation-item
+              a.navigation-link(href="") Компания
+            li.navigation-item
               a.current Каталог
-            li
-              a(href="") Новости
-            li
-              a(href="") Спецпредложения
-            li
-              a(href="") Доставка
-            li
-              a(href="") Контакты
+            li.navigation-item
+              a.navigation-link(href="") Новости
+            li.navigation-item
+              a.navigation-link(href="") Спецпредложения
+            li.navigation-item
+              a.navigation-link(href="") Доставка
+            li.navigation-item
+              a.navigation-link(href="") Контакты
     main.page-content
       .container
         ul.breadcrumbs
-          li
+          li.breadcrumbs-item-home
             a(href="index.html") 
               img(src="", alt="home")
-          li
+          li.breadcrumbs-item
             a(href="") Каталог 
-          li
+          li.breadcrumbs-item
             a(href="") Инструмент
-          li
+          li.breadcrumbs-item
             a.current Перфораторы
         h1 Перфораторы
         aside.aside
           p.filter ФИЛЬТР:
-          h3 ЦЕНА:
-          .choose-price
-            label(for="rating")
-            input(id="rate" name="rate" min="0" max="30000" step="500" value="30000")
           form(action="" method="get")
-            fieldset.choose-filter
+            fieldset.choose-filter-0
+              legend цена:
+              .choose-price
+                label(for="rating")
+                input(id="rate" name="rate" min="0" max="30000" step="500" value="30000")
+              .price-number
+              .line
+              .price-number
+            fieldset.choose-filter-1
               legend Производители:
               p
-                input(type="checkbox" name="bosch" id="")
-                label(for="") bosch
+                input(type="checkbox" name="bosch" id="bosch")
+                label(for="bosch") bosch
               p
-                input(type="checkbox" name="interscol") 
-                label интерскол
+                input(type="checkbox" name="interscol" id="interscol") 
+                label(for="") интерскол
               p
-                input(type="checkbox" name="makita") 
-                label makita
+                input(type="checkbox" name="makita" id="makita") 
+                label(for="makita") makita
               p
-                input(type="checkbox" name="dewalt") 
-                label dewalt
+                input(type="checkbox" name="dewalt" id="dewalt") 
+                label(for="dewalt") dewalt
               p
-                input(type="checkbox" name="hitachi") 
-                label hitachi
+                input(type="checkbox" name="hitachi" id="hitachi") 
+                label(for="hitachi") hitachi
             fieldset.choose-filter-2
               legend питание:
               p
-                input(type="radio" name="charge" value="") 
-                label аккумуляторные
+                input(type="radio" name="charge" value="accum" id="accum") 
+                label(for="accum") аккумуляторные
               p 
-                input(type="radio" name="charge" value="") 
-                label сетевые
+                input(type="radio" name="charge" value="network" id="network") 
+                label(for="network") сетевые
             button(type="submit") Показать
-        .goods
+        section.goods.catalog
           .goods-item
             a(href="")
               img(src="", alt="")
@@ -147,17 +151,17 @@ html(lang="ru")
               img(src="", alt="")
             h3.title Перфоратор BOSCH BFG 2000
             p.price 12500 Р.
-          .goods-item-navigation
-            ul
-              li
-                a(href="") 1
-              li
+          .pager
+            ul.pager-list
+              li.pager-item
+                a.current 1
+              li.pager-item
                 a(href="") 2
-              li
+              li.pager-item
                 a(href="") 3
-              li
+              li.pager-item
                 a(href="") Слудующая
-        .page-content-end
+        .about-puncher
           h3 пара слов о перфораторах
           p Перфоратор — универсальный строительный инструмент. Предназначен для сверления и долбления отверстий в кирпиче, бетоне и камне. Существуют электромеханические и пневматические перфораторы. Современные модели могут выполнять функции дрели, шуруповерта и отбойного молотка. В ассортиментном ряду есть выбор «трехрежимников»: в одном устройстве будут совмещены отбойный молоток и ударная дрель.
     footer.page-footer
@@ -165,7 +169,7 @@ html(lang="ru")
         .top-row
           .logo-bottom
             img(src="", alt="alt")
-          ul
+          ul.footer-nav
             li
               a(href="") Компания
             li
@@ -179,7 +183,7 @@ html(lang="ru")
         .middle-row
           p г. Санкт-петербург, ул. Б. Конюшенная, д. 19/8
             a(href="tel:+78125550555") +7 (812) 555-05-55
-          ul 
+          ul.footer-category
             li
               a(href="") Материалы
             li
@@ -193,4 +197,4 @@ html(lang="ru")
           img(src="", alt="alt")
           p Обратная связь
           a(href="mailto:mail@htmlacademy.ru") mail@htmlacademy.ru
-          a(href="https://htmlacademy.ru/intensive/htmlcss") Разработано htmlacademy.ru
+          a(href="https://htmlacademy.ru/intensive/htmlcss" target="_blank") Разработано htmlacademy.ru
