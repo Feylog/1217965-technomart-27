@@ -32,7 +32,7 @@ html(lang="ru")
         nav.navigation
           ul.navigation-list
             li.navigation-item
-              a.current Главная
+              a.navigation-link.current Главная
             li.navigation-item
               a.navigation-link(href="") Компания
             li.navigation-item
@@ -45,9 +45,9 @@ html(lang="ru")
               a.navigation-link(href="") Доставка
             li.navigation-item
               a.navigation-link(href="") Контакты
-    main.content
+    main.page-content
       section.categories
-        .left-category
+        .left-column
           .item.material
             h3
             a(href="")
@@ -64,9 +64,11 @@ html(lang="ru")
               p Соседям на радость!
               a(href="catalog.html")
             .controls
-            button
-            button
-        .right-category
+              button.dot(type="submit")
+              button.dot(type="submit")
+            button.prev(type="submit")
+            button.next(type="submit")
+        .right-column
           .item.technic
             h3
             a(href="")
@@ -76,8 +78,8 @@ html(lang="ru")
           .item.delivery
             h3
             a(href="")
-      section.popular-products
-        header.popular-goods
+      section.popular.products
+        header.popular-header
           h3 Популярные товары:
           a(href="") все популярные товары
         .goods
@@ -104,73 +106,73 @@ html(lang="ru")
               img(src="", alt="")
             h3.title Перфоратор BOSCH BFG 2000
             p.price 12500 Р.
-        .popular-manufacturer
+      section.popular.manufacturer
+        header.popular-header
           h3 Популярные Производители:
           a(href="") все производители
-        .manufacturers
-          .manufacturers-item
-            a(href="")
+        ul.manufacturers
+          li.manufacturers-item
+            a(href="" target="_blank")
               img(src="", alt="")
-          .manufacturers-item
-            a(href="")
+          li.manufacturers-item
+            a(href="" target="_blank")
               img(src="", alt="")
-          .manufacturers-item
-            a(href="")
+          li.manufacturers-item
+            a(href="" target="_blank")
               img(src="", alt="")
-          .manufacturers-item
-            a(href="")
+          li.manufacturers-item
+            a(href="" target="_blank")
               img(src="", alt="")
-          .manufacturers-item
-            a(href="")
+          li.manufacturers-item
+            a(href="" target="_blank")
               img(src="", alt="")
-          .manufacturers-item
-            a(href="")
+          li.manufacturers-item
+            a(href="" target="_blank")
               img(src="", alt="")
-          .manufacturers-item
-            a(href="")
+          li.manufacturers-item
+            a(href="" target="_blank")
               img(src="", alt="")
-          .manufacturers-item
-            a(href="")
-              img(src="", alt="")            
-      .content-services
+          li.manufacturers-item
+            a(href="" target="_blank")
+              img(src="", alt="")      
+      .company-info-wrapper
         .service
           h3 Сервисы
           p Хороший интернет-магазин отличается от плохого не только ценами! Мы стараемся изо всех сил, чтобы сделать ваши покупки приятными.
           .wrapper
             ul.service-tab-nav
               li.service-tab-item(data-name="1")
-              a(href="") Доставка
-              li.service-tab-item(data-name="2") Гарантия
-              li.service-tab-item(data-name="3") Кредит
+                a(href="") Доставка
+              li.service-tab-item(data-name="2") 
+                a(href="") Гарантия
+              li.service-tab-item(data-name="3") 
+                a(href="") Кредит
             .service-tab-content
-              .service-tab-item
+              .service-tab-item.deliverity
                 h3 Доставка
                 p Мы с удовольствием доставим ваш товар прямо к вашему подъезду совершенно бесплатно! Ведь мы неплохо заработаем, поднимая его на ваш этаж!
-                img(src="", alt="")
-              .service-tab-item
+              .service-tab-item.guarantee
                 h3 Гарантия
                 p Если купленный у нас товар поломается или заискрит, а также в случае пожара, спровоцированного его возгоранием,  вы всегда можете быть уверены в нашей гарантии. Мы обменяем сгоревший товар на новый. Дом уж восстановите как-нибудь сами.
-                img(src="", alt="")
-              .service-tab-item
+              .service-tab-item.credit
                 h3 Кредит
                 p Залезть в долговую яму стало проще! Кредитные консультанты придут вам на помощь.
                 a(href="") отправить заявку
-                img(src="", alt="")
-      .content-about
-        .company
-          h2 Компания "Техномарт"
-          p.company-text Настоящий мужской шопинг начинается здесь! огромный выбор товаровдля ремонта и строительства не оставит равнодушным любителей сэкономить на гастарбайтерах. 
-          p.company-text Мы можемдоставить ваш товар в самые отдельные точки России! Техномарт работает со многими ранспортными компаниями:
-          ul.partners
-            li.partner Деловые линии
-            li.partner Автотрейдинг
-            li.partner ЖелДорЭкспедиция
-          a(href="about.html") Подробнее о компании 
-        .contacts
-          h2 Контакты
-          p можете выбрать товар сами, заехав в наш офис:
-          iframe(src="https://yandex.ru/map-widget/v1/?um=constructor%3Af7942402afd77c97127f6b87a4f2f23d35437ba63bd0ca024083946f659745f8&amp;source=constructor" width="300" height="158" frameborder="0")
-          a(href="") Заблудились? Напишите нам!
+        .about
+          .company
+            h2 Компания "Техномарт"
+            p.text Настоящий мужской шопинг начинается здесь! огромный выбор товаровдля ремонта и строительства не оставит равнодушным любителей сэкономить на гастарбайтерах. 
+            p.text Мы можемдоставить ваш товар в самые отдельные точки России! Техномарт работает со многими ранспортными компаниями:
+            ul.partners
+              li.partner Деловые линии
+              li.partner Автотрейдинг
+              li.partner ЖелДорЭкспедиция
+            a(href="about.html") Подробнее о компании 
+          .contacts
+            h2 Контакты
+            p можете выбрать товар сами, заехав в наш офис:
+            iframe(src="https://yandex.ru/map-widget/v1/?um=constructor%3Af7942402afd77c97127f6b87a4f2f23d35437ba63bd0ca024083946f659745f8&amp;source=constructor" width="300" height="158" frameborder="0")
+            a(href="") Заблудились? Напишите нам!
     footer.page-footer
       .container
         .top-row

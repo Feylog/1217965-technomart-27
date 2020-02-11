@@ -40,7 +40,7 @@ html(lang="ru")
             li.navigation-item
               a.navigation-link(href="") Компания
             li.navigation-item
-              a.current Каталог
+              a.navigation-link.current Каталог
             li.navigation-item
               a.navigation-link(href="") Новости
             li.navigation-item
@@ -52,7 +52,7 @@ html(lang="ru")
     main.page-content
       .container
         ul.breadcrumbs
-          li.breadcrumbs-item-home
+          li.breadcrumbs-item.home
             a(href="index.html") 
               img(src="", alt="home")
           li.breadcrumbs-item
@@ -63,8 +63,8 @@ html(lang="ru")
             a.current Перфораторы
         h1 Перфораторы
         aside.aside
-          p.filter ФИЛЬТР:
-          form(action="" method="get")
+          p.filter фильтр:
+          form(action="https://echo.htmlacademy.ru/courses" method="get")
             fieldset.choose-filter-0
               legend цена:
               .choose-price
@@ -73,7 +73,7 @@ html(lang="ru")
               .price-number
               .line
               .price-number
-            fieldset.choose-filter-1
+            fieldset.choose-filter
               legend Производители:
               p
                 input(type="checkbox" name="bosch" id="bosch")
@@ -90,7 +90,7 @@ html(lang="ru")
               p
                 input(type="checkbox" name="hitachi" id="hitachi") 
                 label(for="hitachi") hitachi
-            fieldset.choose-filter-2
+            fieldset.choose-filter
               legend питание:
               p
                 input(type="radio" name="charge" value="accum" id="accum") 
@@ -101,11 +101,19 @@ html(lang="ru")
             button(type="submit") Показать
         section.goods.catalog
           .sort
-            .sort-to сортировка:
-            .sort-to-type по цене
-            .sort-to-functional по функионалу
-            .sort-to-up
-            .sort-to-down
+            p.sort-to сортировка:
+            ul
+              li.sort-to-price
+                a(href="") по цене
+              li.sort-to-type
+                a(href="") по типу
+              li.sort-to-functional
+                a(href="") по функионалу
+            ul
+              li.sort-to-up
+                a(href="")
+              li.sort-to-down
+                a(href="")
           .goods-item
             a(href="")
               img(src="", alt="")
