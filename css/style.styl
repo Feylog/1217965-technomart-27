@@ -1,0 +1,147 @@
+$color-1 = #fff
+$color-2 = #293449
+$color-3 = #f3f7f9
+$color-4 = #ee3643
+$color-5 = rgba(0, 0, 0, 0.24)
+$color-6 = #32425c
+$color-7 = #000
+$color-8 = #ca2c37
+$color-9 = #32425c
+
+@font-face
+  font-family "Cuprum"
+  src url(../fonts/Cuprum/Cuprum-Regular.ttf) format(TrueType)
+  font-style normal
+  font-weight 400
+
+@font-face
+  font-family "Cuprum-Italic"
+  src url(../fonts/Cuprum/Cuprum-Italic.ttf) format(TrueType)
+  font-style normal
+  font-weight 400
+
+.page
+  margin 0 auto
+  width 1200px
+  height 4252px
+  background $color-1
+
+  .page-header
+    width 1200px
+    height 320px
+    background-color $color-3
+
+    .container
+      width 940px
+      height 260px
+
+      .top-row
+        width 1200px
+        height 42px
+        background-color $color-2
+        font 17px "Cuprum"
+        line-height 18px
+        text-transform capitalize
+
+        .logo-top
+          width 220px
+          height 47px
+          box-shadow inset 0 -5px 0 $color-5
+          background-color $color-4
+
+          &:hover
+            background-color $color-8
+
+        .search
+          width 270px
+
+        .bookmarks
+          width 150px
+
+        .cart
+          width 150px
+
+        .order
+          width 150px
+
+      .middle-row
+        height 153px
+
+        .slogan
+          width 196px
+          height 60px
+          color $color-4
+          font 25px "Cuprum-Italic"
+          line-height 23px
+
+          .visually-hidden
+            position absolute !important
+            height 1px
+            width 1px
+            overflow hidden
+            clip rect(1px 1px 1px 1px)
+            clip rect(1px, 1px, 1px, 1px)
+            white-space nowrap
+
+        .address
+          height 70px
+
+          .phone-number
+            width 270px
+            height 45px
+            border 3px solid $color-1
+
+            .phone
+              width 19px
+              height 19px
+              background-image url(../img/icon-phone.svg)
+
+            .number
+              color $color-4
+              font 21px "Cuprum"
+              line-height 21px
+
+          p
+            color $color-6
+            font 14px "Cuprum"
+            line-height 24px
+
+        .authorization
+          width 281
+          height 45
+          font 21px "Cuprum"
+          line-height 21px
+
+          a
+            color $color-7
+
+          a:hover
+
+
+          .registration
+            background-color $color-1
+            color $color-7
+
+      .navigation
+        width 940px
+        height 60px
+        box-shadow inset 0 -5px 0 $color-2
+        background-color $color-9
+        font 17px"Cuprum"
+        line-height 17px
+
+        .navigation-item
+          width 127px
+
+          &:hover
+            background-color $color-2
+        a
+          color $color-1
+          text-decoration none
+
+  .page-content
+
+
+
+
+
