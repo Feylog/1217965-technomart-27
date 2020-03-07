@@ -1,35 +1,46 @@
-$color-1 = #fff
-$color-2 = #293449
-$color-3 = #f3f7f9
-$color-4 = #ee3643
-$color-5 = rgba(0, 0, 0, 0.24)
-$color-6 = #32425c
-$color-7 = #000
-$color-8 = #ca2c37
-$color-9 = #32425c
+$color-01 = #fff
+$color-02 = #293449
+$color-03 = #f3f7f9
+$color-04 = #ee3643
+$color-05 = rgba(0, 0, 0, 0.24)
+$color-06 = #32425c
+$color-07 = #000
+$color-08 = #ca2c37
+$color-09 = #32425c
+$color-10 = #ffbf47
+$color-11 = #3bbce3
+$color-12 = #dc91d8
+$color-13 = #8ed78f
+$color-14 = #ffc047
 
 @font-face
   font-family "Cuprum"
-  src url(../fonts/Cuprum/Cuprum-Regular.ttf) format(TrueType)
+  src url('../fonts/Cuprum/Cuprum-Regular.ttf') format(TrueType)
   font-style normal
   font-weight 400
 
 @font-face
   font-family "Cuprum-Italic"
-  src url(../fonts/Cuprum/Cuprum-Italic.ttf) format(TrueType)
+  src url('../fonts/Cuprum/Cuprum-Italic.ttf') format(TrueType)
   font-style normal
   font-weight 400
+
+@font-face
+  font-family "Cuprum-Bold"
+  src url('../fonts/Cuprum/Cuprum-Bold.ttf') format(TrueType)
+  font-style normal
+  font-weight 700
 
 .page
   margin 0 auto
   width 1200px
   height 4252px
-  background $color-1
+  background $color-01
 
   .page-header
     width 1200px
     height 320px
-    background-color $color-3
+    background-color $color-03
 
     .container
       width 940px
@@ -38,7 +49,7 @@ $color-9 = #32425c
       .top-row
         width 1200px
         height 42px
-        background-color $color-2
+        background-color $color-02
         font 17px "Cuprum"
         line-height 18px
         text-transform capitalize
@@ -46,11 +57,11 @@ $color-9 = #32425c
         .logo-top
           width 220px
           height 47px
-          box-shadow inset 0 -5px 0 $color-5
-          background-color $color-4
+          box-shadow inset 0 -5px 0 $color-05
+          background-color $color-04
 
           &:hover
-            background-color $color-8
+            background-color $color-08
 
         .search
           width 270px
@@ -70,7 +81,7 @@ $color-9 = #32425c
         .slogan
           width 196px
           height 60px
-          color $color-4
+          color $color-04
           font 25px "Cuprum-Italic"
           line-height 23px
 
@@ -89,20 +100,20 @@ $color-9 = #32425c
           .phone-number
             width 270px
             height 45px
-            border 3px solid $color-1
+            border 3px solid $color-01
 
             .phone
               width 19px
               height 19px
-              background-image url(../img/icon-phone.svg)
+              background-image url('../img/icon-phone.svg')
 
             .number
-              color $color-4
+              color $color-04
               font 21px "Cuprum"
               line-height 21px
 
           p
-            color $color-6
+            color $color-06
             font 14px "Cuprum"
             line-height 24px
 
@@ -113,20 +124,20 @@ $color-9 = #32425c
           line-height 21px
 
           a
-            color $color-7
+            color $color-07
 
           a:hover
 
 
           .registration
-            background-color $color-1
-            color $color-7
+            background-color $color-01
+            color $color-07
 
       .navigation
         width 940px
         height 60px
-        box-shadow inset 0 -5px 0 $color-2
-        background-color $color-9
+        box-shadow inset 0 -5px 0 $color-02
+        background-color $color-09
         font 17px"Cuprum"
         line-height 17px
 
@@ -134,14 +145,85 @@ $color-9 = #32425c
           width 127px
 
           &:hover
-            background-color $color-2
+            background-color $color-02
         a
-          color $color-1
+          color $color-01
           text-decoration none
 
   .page-content
 
+    .categories
+      width 940px
+      height 410px
+      font 24px "Cuprum-Bold"
+      line-height 30px
+      text-transform capitalize
 
+      .left-column
+        width 620px
 
+        .categories-item
+          width 300px
+          height 123px
 
+          a
+            position absolute
+            font 14px "Cuprum"
+            line-height 18px
+            text-transform uppercase
+            color $color-01
+            text-decoration none
 
+          .click
+            background-color $color-07
+            opacity 0.1
+
+        .material
+          background-color $color-10
+
+          .item-icon-material
+            background-image url('../img/icon-1.svg')
+            width 44px
+            height 65px
+
+        .tool
+          background-color $color-11
+
+          .item-icon-tool
+            background-image url('../img/icon-2.svg')
+            width 75px
+            height 61px
+
+        .slider
+          height 266px
+
+      .right-column
+        width 300px
+
+        .categories-item
+          width 300px
+          height 123px
+
+        .technic
+          background-color $color-12
+
+          .item-icon-technic
+            background-image url('../img/icon-3.svg')
+            width 78px
+            height 62px
+
+        .sale
+          background-color $color-13
+
+          .item-icon-sale
+            background-image url('../img/icon-4.svg')
+            width 59px
+            height 72px
+
+        .delivery
+          background-color $color-14
+
+          .item-icon-delivery
+            background-image url('../img/icon-5.svg')
+            width 78px
+            height 63px

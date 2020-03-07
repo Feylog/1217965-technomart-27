@@ -10,6 +10,12 @@
   font-style: normal;
   font-weight: 400;
 }
+@font-face {
+  font-family: "Cuprum-Bold";
+  src: url("../fonts/Cuprum/Cuprum-Bold.ttf") format(TrueType);
+  font-style: normal;
+  font-weight: 700;
+}
 .page {
   margin: 0 auto;
   width: 1200px;
@@ -127,4 +133,80 @@
 .page .page-header .container .navigation a {
   color: #fff;
   text-decoration: none;
+}
+.page .page-content .categories {
+  width: 940px;
+  height: 410px;
+  font: 24px "Cuprum-Bold";
+  line-height: 30px;
+  text-transform: capitalize;
+}
+.page .page-content .categories .left-column {
+  width: 620px;
+}
+.page .page-content .categories .left-column .categories-item {
+  width: 300px;
+  height: 123px;
+}
+.page .page-content .categories .left-column .categories-item a {
+  position: absolute;
+  font: 14px "Cuprum";
+  line-height: 18px;
+  text-transform: uppercase;
+  color: #fff;
+  text-decoration: none;
+}
+.page .page-content .categories .left-column .categories-item .click {
+  background-color: #000;
+  opacity: 0.1;
+}
+.page .page-content .categories .left-column .material {
+  background-color: #ffbf47;
+}
+.page .page-content .categories .left-column .material .item-icon-material {
+  background-image: url("../img/icon-1.svg");
+  width: 44px;
+  height: 65px;
+}
+.page .page-content .categories .left-column .tool {
+  background-color: #3bbce3;
+}
+.page .page-content .categories .left-column .tool .item-icon-tool {
+  background-image: url("../img/icon-2.svg");
+  width: 75px;
+  height: 61px;
+}
+.page .page-content .categories .left-column .slider {
+  height: 266px;
+}
+.page .page-content .categories .right-column {
+  width: 300px;
+}
+.page .page-content .categories .right-column .categories-item {
+  width: 300px;
+  height: 123px;
+}
+.page .page-content .categories .right-column .technic {
+  background-color: #dc91d8;
+}
+.page .page-content .categories .right-column .technic .item-icon-technic {
+  background-image: url("../img/icon-3.svg");
+  width: 78px;
+  height: 62px;
+}
+.page .page-content .categories .right-column .sale {
+  background-color: #8ed78f;
+}
+.page .page-content .categories .right-column .sale .item-icon-sale {
+  background-image: url("../img/icon-4.svg");
+  width: 59px;
+  height: 72px;
+}
+.page .page-content .categories .right-column .delivery {
+  background-color: #ffc047;
+}
+.page .page-content .categories .right-column .delivery .item-icon-delivery {
+  background-image: url("../img/icon-5.svg");
+  width: 78px;
+  height: 63px;
 }
