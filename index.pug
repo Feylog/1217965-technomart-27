@@ -67,21 +67,25 @@ html(lang="ru")
         .left-column
           .categories-item.material
             h3 материалы
-            a.click(href="") на любой вкус
+            .click
+              a(href="") на любой вкус
             .item-icon-material
           .categories-item.tool
             h3 инструмент
-            a.click(href="") на все случаи
+            .click
+              a(href="") на все случаи
             .item-icon-tool
           .categories-item.slider
-            .slider-item
+            .slider-item.perf
               h3 Перфораторы
               p Настоящие мужские игрушки
-              a.btn(href="catalog.html") Открыть каталог
-            .slider-item
+              .btn
+                a(href="catalog.html") Открыть каталог
+            .slider-item.drill
               h3 Дрели
               p Соседям на радость!
-              a.btn(href="catalog.html") Открыть каталог
+              .btn
+                a(href="catalog.html") Открыть каталог
             .controls
               button.dot.active(type="button")
               button.dot(type="button")
@@ -90,20 +94,24 @@ html(lang="ru")
         .right-column
           .categories-item.technic
             h3 техника
-            a.click(href="") для стройки
+            .click
+              a(href="") для стройки
             .item-icon-technic
           .categories-item.sale
             h3 скидка 50%
-            a.click(href="") на 350 товаров
+            .click
+              a(href="") на 350 товаров
             .item-icon-sale
           .categories-item.delivery
             h3 доставка
-            a.click(href="") бесплатно
+            .click
+              a(href="") бесплатно
             .item-icon-delivery
       section.popular.products
         header.popular-header
           h3 Популярные товары:
-          a.btn(href="") все популярные товары
+          .btn
+            a(href="") все популярные товары
         .goods
           .goods-item
             a(href="")
@@ -143,7 +151,8 @@ html(lang="ru")
       section.popular.manufacturer
         header.popular-header
           h3 Популярные Производители:
-          a.btn(href="") все производители
+          .btn
+            a(href="") все производители
         ul.manufacturers
           li.manufacturers-item
             a(href="" target="_blank")

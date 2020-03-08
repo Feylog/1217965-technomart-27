@@ -16,6 +16,12 @@
   font-style: normal;
   font-weight: 700;
 }
+@font-face {
+  font-family: "PT-sans-Bold";
+  src: url("../fonts/PTSans/PTS75F.ttf") format(TrueType);
+  font-style: normal;
+  font-weight: 700;
+}
 .page {
   margin: 0 auto;
   width: 1200px;
@@ -139,7 +145,6 @@
   height: 410px;
   font: 24px "Cuprum-Bold";
   line-height: 30px;
-  text-transform: capitalize;
 }
 .page .page-content .categories .left-column {
   width: 620px;
@@ -148,17 +153,19 @@
   width: 300px;
   height: 123px;
 }
-.page .page-content .categories .left-column .categories-item a {
-  position: absolute;
+.page .page-content .categories .left-column .categories-item .click {
+  width: 135px;
+  height: 38px;
+  background-color: #000;
+  opacity: 0.1;
+  text-align: center;
+}
+.page .page-content .categories .left-column .categories-item .click a {
   font: 14px "Cuprum";
   line-height: 18px;
   text-transform: uppercase;
   color: #fff;
   text-decoration: none;
-}
-.page .page-content .categories .left-column .categories-item .click {
-  background-color: #000;
-  opacity: 0.1;
 }
 .page .page-content .categories .left-column .material {
   background-color: #ffbf47;
@@ -177,14 +184,76 @@
   height: 61px;
 }
 .page .page-content .categories .left-column .slider {
+  width: 620px;
   height: 266px;
+}
+.page .page-content .categories .left-column .slider .slider-item h3 {
+  color: #fff;
+  font: 36px "Cuprum-Bold";
+  line-height: 36px;
+  text-transform: uppercase;
+}
+.page .page-content .categories .left-column .slider .slider-item p {
+  color: #fff;
+  font: 18px "Cuprum";
+  line-height: 24px;
+}
+.page .page-content .categories .left-column .slider .slider-item .btn {
+  width: 195px;
+  height: 38px;
+  background-color: #ee3643;
+}
+.page .page-content .categories .left-column .slider .slider-item .btn a {
+  color: #fff;
+  font: 14px "Cuprum";
+  line-height: 18px;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+.page .page-content .categories .left-column .slider .perf {
+  width: 620px;
+  height: 266px;
+  background-image: url("../img/perf.jpg");
+}
+.page .page-content .categories .left-column .slider .drill {
+  width: 620px;
+  height: 266px;
+  background-image: url("../img/drill.jpg");
+}
+.page .page-content .categories .left-column .slider .controls .dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+}
+.page .page-content .categories .left-column .slider .prev {
+  background-image: url("../img/icon-left.svg");
+  width: 22px;
+  height: 40px;
+}
+.page .page-content .categories .left-column .slider .next {
+  background-image: url("../img/icon-right.svg");
+  width: 22px;
+  height: 40px;
 }
 .page .page-content .categories .right-column {
   width: 300px;
 }
 .page .page-content .categories .right-column .categories-item {
-  width: 300px;
   height: 123px;
+}
+.page .page-content .categories .right-column .categories-item .click {
+  width: 135px;
+  height: 38px;
+  background-color: #000;
+  opacity: 0.1;
+  text-align: center;
+}
+.page .page-content .categories .right-column .categories-item .click a {
+  font: 14px "Cuprum";
+  line-height: 18px;
+  text-transform: uppercase;
+  color: #fff;
+  text-decoration: none;
 }
 .page .page-content .categories .right-column .technic {
   background-color: #dc91d8;
@@ -209,4 +278,51 @@
   background-image: url("../img/icon-5.svg");
   width: 78px;
   height: 63px;
+}
+.page .page-content .popular .popular-header {
+  width: 940px;
+  height: 89px;
+  background-color: #f9f5f0;
+}
+.page .page-content .popular .popular-header h3 {
+  color: #32425c;
+  font: 30px "Cuprum";
+  line-height: 30px;
+  text-transform: uppercase;
+}
+.page .page-content .popular .popular-header .btn {
+  width: 253px;
+  height: 38px;
+  background-color: #ee3643;
+}
+.page .page-content .popular .popular-header .btn a {
+  font: 14px "Cuprum";
+  line-height: 18px;
+  color: #fff;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+.page .page-content .popular .goods .goods-item .title {
+  width: 155px;
+  height: 33px;
+  color: #000;
+  font: 18px "PT-sans-Bold";
+  line-height: 20px;
+}
+.page .page-content .popular .goods .goods-item .old-price {
+  width: 67px;
+  height: 12px;
+  color: #a9a9a9;
+  font: 17px "PT-sans-Bold";
+  line-height: 18px;
+  text-transform: uppercase;
+}
+.page .page-content .popular .goods .goods-item .price {
+  width: 65px;
+  height: 12px;
+  color: #fff;
+  font: 17px "PT-sans-Bold";
+  line-height: 18px;
+  text-transform: uppercase;
+  background-image: url("../img/btn_copy_14.svg");
 }

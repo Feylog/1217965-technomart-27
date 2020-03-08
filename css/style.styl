@@ -12,6 +12,8 @@ $color-11 = #3bbce3
 $color-12 = #dc91d8
 $color-13 = #8ed78f
 $color-14 = #ffc047
+$color-15 = #f9f5f0
+$color-16 = #a9a9a9
 
 @font-face
   font-family "Cuprum"
@@ -28,6 +30,12 @@ $color-14 = #ffc047
 @font-face
   font-family "Cuprum-Bold"
   src url('../fonts/Cuprum/Cuprum-Bold.ttf') format(TrueType)
+  font-style normal
+  font-weight 700
+
+@font-face
+  font-family "PT-sans-Bold"
+  src url('../fonts/PTSans/PTS75F.ttf') format(TrueType)
   font-style normal
   font-weight 700
 
@@ -157,7 +165,6 @@ $color-14 = #ffc047
       height 410px
       font 24px "Cuprum-Bold"
       line-height 30px
-      text-transform capitalize
 
       .left-column
         width 620px
@@ -166,17 +173,19 @@ $color-14 = #ffc047
           width 300px
           height 123px
 
-          a
-            position absolute
-            font 14px "Cuprum"
-            line-height 18px
-            text-transform uppercase
-            color $color-01
-            text-decoration none
-
           .click
+            width 135px
+            height 38px
             background-color $color-07
             opacity 0.1
+            text-align center
+
+            a
+              font 14px "Cuprum"
+              line-height 18px
+              text-transform uppercase
+              color $color-01
+              text-decoration none
 
         .material
           background-color $color-10
@@ -195,14 +204,79 @@ $color-14 = #ffc047
             height 61px
 
         .slider
+          width 620px
           height 266px
+
+          .slider-item
+
+            h3
+              color $color-01
+              font 36px "Cuprum-Bold"
+              line-height 36px
+              text-transform uppercase
+
+            p
+              color $color-01
+              font 18px "Cuprum"
+              line-height 24px
+
+            .btn
+              width 195px
+              height 38px
+              background-color $color-04
+
+              a
+                color $color-01
+                font 14px "Cuprum"
+                line-height 18px
+                text-transform uppercase
+                text-decoration none
+
+          .perf
+            width 620px
+            height 266px
+            background-image url('../img/perf.jpg')
+
+          .drill
+            width 620px
+            height 266px
+            background-image url('../img/drill.jpg')
+
+          .controls
+
+            .dot
+              width 10px
+              height 10px
+              border-radius 50%
+
+          .prev
+            background-image url('../img/icon-left.svg')
+            width 22px
+            height 40px
+          .next
+            background-image url('../img/icon-right.svg')
+            width 22px
+            height 40px
 
       .right-column
         width 300px
 
         .categories-item
-          width 300px
           height 123px
+
+          .click
+            width 135px
+            height 38px
+            background-color $color-07
+            opacity 0.1
+            text-align center
+
+            a
+              font 14px "Cuprum"
+              line-height 18px
+              text-transform uppercase
+              color $color-01
+              text-decoration none
 
         .technic
           background-color $color-12
@@ -227,3 +301,54 @@ $color-14 = #ffc047
             background-image url('../img/icon-5.svg')
             width 78px
             height 63px
+
+    .popular
+
+      .popular-header
+        width 940px
+        height 89px
+        background-color $color-15
+
+        h3
+          color $color-06
+          font 30px "Cuprum"
+          line-height 30px
+          text-transform uppercase
+
+        .btn
+          width 253px
+          height 38px
+          background-color $color-04
+
+          a
+            font 14px "Cuprum"
+            line-height 18px
+            color $color-01
+            text-transform uppercase
+            text-decoration none
+
+      .goods
+
+        .goods-item
+
+          .title
+            width 155px
+            height 33px
+            color $color-07
+            font 18px "PT-sans-Bold"
+            line-height 20px
+          .old-price
+            width 67px
+            height 12px
+            color $color-16
+            font 17px "PT-sans-Bold"
+            line-height 18px
+            text-transform uppercase
+          .price
+            width 65px
+            height 12px
+            color $color-01
+            font 17px "PT-sans-Bold"
+            line-height 18px
+            text-transform uppercase
+            background-image url('../img/btn_copy_14.svg')
