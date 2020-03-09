@@ -3,6 +3,7 @@ html(lang="ru")
   head
     meta(charset="utf-8")
     title HTML Academy: Техномарт Главная
+    link(rel="stylesheet", href="css/normalize.css")
     link(rel="stylesheet", href="css/style.css")
   body.page
     header.page-header
@@ -67,25 +68,21 @@ html(lang="ru")
         .left-column
           .categories-item.material
             h3 материалы
-            .click
-              a(href="") на любой вкус
+            a.click(href="") на любой вкус
             .item-icon-material
           .categories-item.tool
             h3 инструмент
-            .click
-              a(href="") на все случаи
+            a.click(href="") на все случаи
             .item-icon-tool
           .categories-item.slider
             .slider-item.perf
               h3 Перфораторы
               p Настоящие мужские игрушки
-              .btn
-                a(href="catalog.html") Открыть каталог
+              a.btn(href="catalog.html") Открыть каталог
             .slider-item.drill
               h3 Дрели
               p Соседям на радость!
-              .btn
-                a(href="catalog.html") Открыть каталог
+              a.btn(href="catalog.html") Открыть каталог
             .controls
               button.dot.active(type="button")
               button.dot(type="button")
@@ -94,24 +91,20 @@ html(lang="ru")
         .right-column
           .categories-item.technic
             h3 техника
-            .click
-              a(href="") для стройки
+            a.click(href="") для стройки
             .item-icon-technic
           .categories-item.sale
             h3 скидка 50%
-            .click
-              a(href="") на 350 товаров
+            a.click(href="") на 350 товаров
             .item-icon-sale
           .categories-item.delivery
             h3 доставка
-            .click
-              a(href="") бесплатно
+            a.click(href="") бесплатно
             .item-icon-delivery
       section.popular.products
         header.popular-header
           h3 Популярные товары:
-          .btn
-            a(href="") все популярные товары
+          a.btn(href="") все популярные товары
         .goods
           .goods-item
             a(href="")
@@ -151,8 +144,7 @@ html(lang="ru")
       section.popular.manufacturer
         header.popular-header
           h3 Популярные Производители:
-          .btn
-            a(href="") все производители
+          a.btn(href="") все производители
         ul.manufacturers
           li.manufacturers-item
             a(href="" target="_blank")
@@ -230,8 +222,8 @@ html(lang="ru")
               .button
                 button.btn(type="submit") отправить
     footer.page-footer
-      .container
-        .top-row
+      .footer-container
+        .footer-top-row
           .logo-bottom
             img(src="img/logo-technomart.svg", alt="logo")
           ul.footer-nav
@@ -245,7 +237,7 @@ html(lang="ru")
               a(href="") Доставка
             li
               a(href="") Контакты
-        .middle-row
+        .footer-middle-row
           p г. Санкт-петербург, ул. Б. Конюшенная, д. 19/8
             a(href="tel:+78125550555") +7 (812) 555-05-55
           ul.footer-category
@@ -257,15 +249,16 @@ html(lang="ru")
               a(href="") Инструмент
             li
               a(href="") Спецпредложения
-        .bottom-row
+        .footer-bottom-row
           p © 2010-2017 Компания "Техномарт" Все права защищены
           section.socials
-            .social-item.vk
-              a(href="vk.com" target="_blank" aria-label="vk")
+            .social-item
+              a.vk(href="vk.com" target="_blank" aria-label="vk")
             .social-item.facebook
               a(href="facebook.com" target="_blank" aria-label="facebook")
             .social-item.instagram
               a(href="instagram.com" target="_blank" aria-label="instagram")
           p Обратная связь
           a(href="mailto:mail@htmlacademy.ru") mail@htmlacademy.ru
-          a(href="https://htmlacademy.ru/intensive/htmlcss" target="_blank") Разработано htmlacademy.ru
+          p Разработано
+          a(href="https://htmlacademy.ru/intensive/htmlcss" target="_blank") htmlacademy.ru

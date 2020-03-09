@@ -3,6 +3,7 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Техномарт Главная</title>
+    <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/style.css">
   </head>
   <body class="page">
@@ -68,25 +69,21 @@
       <section class="categories">
         <div class="left-column">
           <div class="categories-item material">
-            <h3>материалы</h3>
-            <div class="click"><a href="">на любой вкус</a></div>
+            <h3>материалы</h3><a class="click" href="">на любой вкус</a>
             <div class="item-icon-material"></div>
           </div>
           <div class="categories-item tool">
-            <h3>инструмент</h3>
-            <div class="click"><a href="">на все случаи</a></div>
+            <h3>инструмент</h3><a class="click" href="">на все случаи</a>
             <div class="item-icon-tool"></div>
           </div>
           <div class="categories-item slider">
             <div class="slider-item perf">
               <h3>Перфораторы</h3>
-              <p>Настоящие мужские игрушки</p>
-              <div class="btn"><a href="catalog.html">Открыть каталог</a></div>
+              <p>Настоящие мужские игрушки</p><a class="btn" href="catalog.html">Открыть каталог</a>
             </div>
             <div class="slider-item drill">
               <h3>Дрели</h3>
-              <p>Соседям на радость!</p>
-              <div class="btn"><a href="catalog.html">Открыть каталог</a></div>
+              <p>Соседям на радость!</p><a class="btn" href="catalog.html">Открыть каталог</a>
             </div>
             <div class="controls">
               <button class="dot active" type="button"></button>
@@ -98,26 +95,22 @@
         </div>
         <div class="right-column">
           <div class="categories-item technic">
-            <h3>техника</h3>
-            <div class="click"><a href="">для стройки</a></div>
+            <h3>техника</h3><a class="click" href="">для стройки</a>
             <div class="item-icon-technic"></div>
           </div>
           <div class="categories-item sale">
-            <h3>скидка 50%</h3>
-            <div class="click"><a href="">на 350 товаров</a></div>
+            <h3>скидка 50%</h3><a class="click" href="">на 350 товаров</a>
             <div class="item-icon-sale"></div>
           </div>
           <div class="categories-item delivery">
-            <h3>доставка</h3>
-            <div class="click"><a href="">бесплатно</a></div>
+            <h3>доставка</h3><a class="click" href="">бесплатно</a>
             <div class="item-icon-delivery"></div>
           </div>
         </div>
       </section>
       <section class="popular products">
         <header class="popular-header">
-          <h3>Популярные товары:</h3>
-          <div class="btn"><a href="">все популярные товары</a></div>
+          <h3>Популярные товары:</h3><a class="btn" href="">все популярные товары</a>
         </header>
         <div class="goods">
           <div class="goods-item"><a href=""><img src="img/Perforator_9000.jpg" alt="Perforator_9000"></a>
@@ -155,8 +148,7 @@
       </section>
       <section class="popular manufacturer">
         <header class="popular-header">
-          <h3>Популярные Производители:</h3>
-          <div class="btn"><a href="">все производители</a></div>
+          <h3>Популярные Производители:</h3><a class="btn" href="">все производители</a>
         </header>
         <ul class="manufacturers">
           <li class="manufacturers-item"><a href="" target="_blank"><img src="img/bosch.png" alt="bosch"></a></li>
@@ -234,8 +226,8 @@
       </div>
     </main>
     <footer class="page-footer">
-      <div class="container">
-        <div class="top-row">
+      <div class="footer-container">
+        <div class="footer-top-row">
           <div class="logo-bottom"><img src="img/logo-technomart.svg" alt="logo"></div>
           <ul class="footer-nav">
             <li><a href="">Компания</a></li>
@@ -245,7 +237,7 @@
             <li><a href="">Контакты</a></li>
           </ul>
         </div>
-        <div class="middle-row">
+        <div class="footer-middle-row">
           <p>г. Санкт-петербург, ул. Б. Конюшенная, д. 19/8<a href="tel:+78125550555">+7 (812) 555-05-55</a></p>
           <ul class="footer-category">
             <li><a href="">Материалы</a></li>
@@ -254,14 +246,15 @@
             <li><a href="">Спецпредложения</a></li>
           </ul>
         </div>
-        <div class="bottom-row">
+        <div class="footer-bottom-row">
           <p>© 2010-2017 Компания "Техномарт" Все права защищены</p>
           <section class="socials">
-            <div class="social-item vk"><a href="vk.com" target="_blank" aria-label="vk"></a></div>
+            <div class="social-item"><a class="vk" href="vk.com" target="_blank" aria-label="vk"></a></div>
             <div class="social-item facebook"><a href="facebook.com" target="_blank" aria-label="facebook"></a></div>
             <div class="social-item instagram"><a href="instagram.com" target="_blank" aria-label="instagram"></a></div>
           </section>
-          <p>Обратная связь</p><a href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a><a href="https://htmlacademy.ru/intensive/htmlcss" target="_blank">Разработано htmlacademy.ru</a>
+          <p>Обратная связь</p><a href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a>
+          <p>Разработано</p><a href="https://htmlacademy.ru/intensive/htmlcss" target="_blank">htmlacademy.ru</a>
         </div>
       </div>
     </footer>
