@@ -26,6 +26,16 @@ $color-25 = #63a63e
 $color-26 = #1d2739
 $color-27 = rgba(41, 52, 73, 0.5)
 $color-28 = #367315
+$color-29 = #f2f6f8
+$color-30 = #e5e5e5
+$color-31 = #bdc6ca
+$color-32 = #f2f6f8
+$color-33 = #f7f3ec
+$color-34 = #c5c5c5
+$color-35 = #f1f1f1
+$color-36 = rgba(0, 0, 0, 0.75)
+$color-37 = #f4f4f4
+$color-38 = #dee3e4
 
 html
   box-sizing border-box
@@ -75,7 +85,7 @@ html
   line-height 18px
 
 .visually-hidden
-  position absolute !important
+  position absolute
   height 1px
   width 1px
   overflow hidden
@@ -122,6 +132,20 @@ a
   &:active
     background-color $color-22
 
+.bookmark-icon
+  display inline-block
+  width 14px
+  height 16px
+  background $color-01 url('../img/icon-bookmark.svg')
+  opacity 0.3
+
+.cart-icon
+  display inline-block
+  width 15px
+  height 15px
+  background $color-01 url('../img/icon-cart.svg')
+  opacity 0.3
+
 .order
   background-color $color-25
   &:hover
@@ -150,15 +174,45 @@ a
     color $color-06
     line-height 24px
 
+/* catalog style start */
+
 .authorization
   font 21px "Cuprum"
   line-height 21px
   a
     color $color-07
+    background-color $color-01
+    &:hover
+      color $color-04
+    &:active
+      opacity 0.3
+      color $color-07
 
-.registration
-  background-color $color-01
-  color $color-07
+.enter
+  path
+    &:hover
+      fill $color-06
+
+.customer, .logout
+  path
+    &:hover
+      fill $color-06
+
+.personal-item:first-child
+    list-style none
+
+.personal-item
+  a
+    color $color-06
+    font-size 16px
+    text-decoration underline
+    &:hover
+      color $color-04
+    &:active
+      opacity 0.3
+      color $color-06
+
+/* catalog style end */
 
 .navigation
   box-shadow inset 0 -5px 0 $color-02
@@ -263,6 +317,94 @@ a
   width 78px
   height 63px
 
+/* catalog styles start */
+
+.breadcrumbs-item
+  list-style none
+  a
+    font 13px "pt-sans"
+    color $color-07
+    text-transform uppercase
+
+.home
+  background url('../img/icon-home.svg') no-repeat
+  width 14px
+  height 12px
+
+  a
+    display inline-block
+    vertical-align top
+    width 100%
+    height 100%
+
+.content-title
+    background-color $color-32
+    color $color-06
+    font-size 30px
+    line-height 30px
+    text-transform uppercase
+
+.aside
+  font 17px "pt-sans-bold"
+  line-height 30px
+  text-transform uppercase
+  button
+    font 13px "pt-sans"
+    border 1px solid $color-30
+    background-color $color-01
+
+.choose-filter-0
+  border none
+
+.choose-filter
+  border none
+  border-bottom 1px solid
+
+
+.filter
+  font 13px "pt-sans"
+  background-color $color-33
+
+.choose-price
+  font 17px "pt-sans"
+  input
+    background-color $color-33
+
+.choose-filter
+  label
+    font 15px "pt-sans"
+    line-height 20px
+
+.sort
+  background-color $color-33
+  font 13px "pt-sans"
+  text-transform uppercase
+
+.sort-list, .arrows
+  list-style none
+  a
+    display inline-block
+    vertical-align top
+    opacity .3
+    color $color-07
+    font 13px "pt-sans"
+    text-decoration underline $color-04
+    &:hover
+      opacity 1
+    &:active
+      color $color-04
+      text-decoration none
+
+.arrow
+  path
+    &:hover
+      opacity 1
+    &:active
+      opacity 1
+      fill $color-04
+
+/* catalog styles end */
+
 .popular-header
   background-color $color-15
 
@@ -277,31 +419,45 @@ a
   line-height 18px
   &:hover
     box-shadow 0 10px 25px $color-27
+  &:hover > .hidden
+    display block
 
-  .visually-hidden
-    a
-      box-shadow inset 0 -3px 0 $color-28
-      background-color $color-25
-      &:hover
-        background-color $color-23
-      &:active
-        background-color $color-24
-
-  .title
-    color $color-07
-    font-size 18px
-    line-height 20px
-
-  .old-price
-    color $color-16
+.hidden
+  display none
+  font 14px "Cuprum"
+  line-height 18px
+  text-transform uppercase
+  a
+    box-shadow inset 0 -3px 0 $color-28
+    background-color $color-25
+    &:hover
+      background-color $color-23
+    &:active
+      background-color $color-24
+  button
     text-transform uppercase
+    border 3px solid $color-25
+    &:hover
+      border 3px solid $color-06
+    &:active
+      border 3px solid $color-06
+      opacity 0.3
 
-  .price
-    color $color-01
-    text-transform uppercase
-    background-image url('../img/btn_copy_14.svg')
-    width 141px
-    height 38px
+.title
+  color $color-07
+  font-size 18px
+  line-height 20px
+
+.old-price
+  color $color-16
+  text-transform uppercase
+
+.price
+  color $color-01
+  text-transform uppercase
+  background-image url('../img/btn_copy_14.svg')
+  width 141px
+  height 38px
 
 .manufacturers-item
   list-style none
@@ -340,13 +496,13 @@ a
       color $color-06
 
 .deliverity
-  background-image url('../img/Layer_131.png')
+  background url('../img/Layer_131.png') no-repeat
 
 .guarantee
-  background-image url('../img/Layer_130.png')
+  background url('../img/Layer_130.png') no-repeat
 
 .credit
-  background-image url('../img/Layer_119.png')
+  background url('../img/Layer_119.png') no-repeat
 
 .about
   h2
@@ -364,6 +520,90 @@ a
   font-size 18px
   line-height 20px
 
+/* catalog styles start */
+
+/* cart start */
+
+.good-in-cart
+  border-top 7px solid $color-04
+  box-shadow 0 20px 40px $color-27
+  p
+    font-size 30px
+    line-height 30px
+  button
+    text-transform uppercase
+
+.order-buy
+  background-color $color-35
+
+.icon-mark
+  background url('../img/icon-mark.svg')
+  width 66px
+  height 66px
+
+.close
+  background url('../img/icon-close.svg')
+  width 21px
+  height 21px
+
+/* cart end */
+
+.pager
+  font 13px "pt-sans"
+  line-height 18px
+  color $color-01
+
+.pager-list
+  list-style none
+
+.pager-item
+  border 1px solid $color-30
+  background-color $color-01
+  a
+    font 13px "PT Sans"
+    color $color-07
+    text-transform uppercase
+  &:hover
+    border 1px solid $color-31
+  &:active
+    border 1px solid $color-04
+  .current
+    background-color $color-04
+    color $color-01
+
+.about-puncher
+  background-color $color-29
+  h3
+    font-size 30px
+    line-height 30px
+    text-transform uppercase
+  p
+    font 13px "pt-sans"
+    line-height 24px
+
+/* catalog styles end */
+
+/* send form start */
+
+.send-form
+  border-top 7px solid $color-04
+  box-shadow 0 20px 40px $color-36
+  p
+    font-size 18px
+
+.half-width, .full-width
+  input
+    border 2px solid $color-38
+    font 13px "pt-sans"
+    color $color-16
+
+.form-button
+  background-color $color-37
+  .btn
+    color $color-01
+
+/* send form end */
+
 .page-footer
   background-color $color-06
   font-size 18px
@@ -372,6 +612,9 @@ a
 .logo-bottom
   box-shadow inset 0 -5px 0 $color-05
   background-color $color-04
+  a
+    width 100%
+    height 100%
 
 .footer-nav
   list-style none
@@ -412,6 +655,12 @@ a
   background-color $color-20
   &:hover, &:active
     background-color $color-04
+
+  a
+    display inline-block
+    vertical-align top
+    width 100%
+    height 100%
 
 .vk
   background-image url('../img/icon-vk.svg')
