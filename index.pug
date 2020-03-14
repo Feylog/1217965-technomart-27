@@ -11,7 +11,7 @@ html(lang="ru")
         .top-row
           .logo-top
             a(href="")
-              img(src="img/logo-technomart.svg", alt="logo")
+              img(src="img/logo-technomart.svg" alt="logo")
           .search
             form(action="search.html" method="get")
               input(type="text" id="search" placeholder="Поиск:")
@@ -20,13 +20,13 @@ html(lang="ru")
                   path(fill="#ffffff" d="M17 15.586l-3.542-3.542A7.465 7.465 0 0 0 15 7.5 7.5 7.5 0 1 0 7.5 15c1.71 0 3.282-.579 4.544-1.542L15.586 17 17 15.586zM2 7.5C2 4.467 4.467 2 7.5 2 10.532 2 13 4.467 13 7.5c0 3.032-2.468 5.5-5.5 5.5A5.506 5.506 0 0 1 2 7.5z")
           .bookmarks
             .bookmarks-icon
-            a(href="") Закладки:
+            a(href="") закладки:
             span 0
           .cart
             .cart-icon
-            a(href="") Корзина:
+            a(href="") корзина:
             span 0
-          a.order(href="") Оформить заказ
+          a.order(href="") оформить заказ
         .middle-row
           .slogan
             h2.visually-hidden главные данные
@@ -37,11 +37,10 @@ html(lang="ru")
               a.number(href="tel:+78125550555") +7 (812) 555-05-55
             p г. Санкт-петербург, ул. Б. Конюшенная, д. 19/8
           .authorization
-            a.enter(href="login.html" aria-label="login")
+            a.enter(href="login.html" aria-label="login") Войти
               svg(xmlns="http://www.w3.org/2000/svg" width="20" height="17" viewBox="0 0 20 17")
                 path(fill="#c5c5c5" d="M14.875 8.5L6 0v6H0v5h6v6z")
                 path(fill="#c5c5c5" d="M16.986 15.01h-5.027V17h5.027c2.178 0 3.004-1.81 3.029-3.026V3.028C19.99 1.811 19.164 0 16.986 0h-5.027v1.99h5.027c.839 0 .992.681 1.01 1.057v10.904c-.017.376-.171 1.059-1.01 1.059z")
-              a.customer(href="login.html") Войти
             a.registration(href="registration.html") Регистриция
         nav.navigation
           ul.navigation-list
@@ -60,107 +59,108 @@ html(lang="ru")
             li.navigation-item
               a.navigation-link(href="") Контакты
     main.page-content
-      section.categories
-        .left-column
-          .categories-item.material
-            h3 материалы
-            a.click(href="") на любой вкус
-          .categories-item.tool
-            h3 инструмент
-            a.click(href="") на все случаи
-          .categories-item.slider
-            .slider-item.perf
-              h3 Перфораторы
-              p Настоящие мужские игрушки
-              a.btn(href="catalog.html") Открыть каталог
-            .slider-item.drill
-              h3 Дрели
-              p Соседям на радость!
-              a.btn(href="catalog.html") Открыть каталог
-            .controls
-              button.dot.active(type="button")
-              button.dot(type="button")
-            button.prev(type="button")
-            button.next(type="button")
-        .right-column
-          .categories-item.technic
-            h3 техника
-            a.click(href="") для стройки
-          .categories-item.sale
-            h3 скидка 50%
-            a.click(href="") на 350 товаров
-          .categories-item.delivery
-            h3 доставка
-            a.click(href="") бесплатно
-      section.popular.products
-        header.popular-header
-          h3 Популярные товары:
-          a.btn(href="") все популярные товары
-        .goods
-          .goods-item
-            a(href="")
-              img(src="img/Perforator_9000.jpg", alt="Perforator_9000")
-            .hidden
-              a(href="") купить
-              button(type="submit") в закладки
-            h3.title Перфоратор BOSCH BFG 9000
-            s.old-price 32500 Р.
-            p.price 25500 Р.
-          .goods-item
-            a(href="")
-              img(src="img/Perforator_3000.jpg", alt="Perforator_3000")
-            .hidden
-              a(href="") купить
-              button(type="submit") в закладки
-            h3.title Перфоратор BOSCH BFG 3000
-            s.old-price 22500 Р.
-            p.price 15500 Р.
-          .goods-item
-            a(href="")
-              img(src="img/Perforator_6000.jpg", alt="Perforator_6000")
-            .hidden
-              a(href="") купить
-              button(type="submit") в закладки
-            h3.title Перфоратор BOSCH BFG 6000
-            s.old-price 30500 Р.
-            p.price 25500 Р.
-          .goods-item
-            a(href="")
-              img(src="img/Perforator_2000.jpg", alt="Perforator_2000")
-            .hidden
-              a(href="") купить
-              button(type="submit") в закладки
-            h3.title Перфоратор BOSCH BFG 2000
-            p.price 12500 Р.
-      section.popular.manufacturer
-        header.popular-header
-          h3 Популярные Производители:
-          a.btn(href="") все производители
-        ul.manufacturers
-          li.manufacturers-item
-            a(href="" target="_blank")
-              img(src="img/bosch.png", alt="bosch")
-          li.manufacturers-item
-            a(href="" target="_blank")
-              img(src="img/Makita.png", alt="Makita")
-          li.manufacturers-item
-            a(href="" target="_blank")
-              img(src="img/DeWALT.png", alt="DeWALT")
-          li.manufacturers-item
-            a(href="" target="_blank")
-              img(src="img/Интерскол.png", alt="Интерскол")
-          li.manufacturers-item
-            a(href="" target="_blank")
-              img(src="img/Hitachi.png", alt="Hitachi")
-          li.manufacturers-item
-            a(href="" target="_blank")
-              img(src="img/LG.png", alt="LG")
-          li.manufacturers-item
-            a(href="" target="_blank")
-              img(src="img/AEG.png", alt="AEG")
-          li.manufacturers-item
-            a(href="" target="_blank")
-              img(src="img/Metabo.png", alt="Metabo")
+      .container
+        section.categories
+          .left-column
+            .categories-item.material
+              h3 материалы
+              a.categories-item-link(href="") на любой вкус
+            .categories-item.tool
+              h3 инструмент
+              a.categories-item-link(href="") на все случаи
+            .categories-item.slider
+              .slider-item.perf
+                h3 Перфораторы
+                p Настоящие мужские игрушки
+                a.btn(href="catalog.html") Открыть каталог
+              .slider-item.drill
+                h3 Дрели
+                p Соседям на радость!
+                a.btn(href="catalog.html") Открыть каталог
+              .controls
+                button.dot.active(type="button")
+                button.dot(type="button")
+              button.prev(type="button")
+              button.next(type="button")
+          .right-column
+            .categories-item.technic
+              h3 техника
+              a.categories-item-link(href="") для стройки
+            .categories-item.sale
+              h3 скидка 50%
+              a.categories-item-link(href="") на 350 товаров
+            .categories-item.delivery
+              h3 доставка
+              a.categories-item-link(href="") бесплатно
+        section.popular.products
+          header.popular-header
+            h3 Популярные товары:
+            a.btn(href="") все популярные товары
+          .goods
+            .goods-item
+              a(href="")
+                img(src="img/Perforator_9000.jpg", alt="Perforator_9000")
+              .hidden
+                a(href="") купить
+                button(type="submit") в закладки
+              h3.title Перфоратор BOSCH BFG 9000
+              s.old-price 32500 Р.
+              p.price 25500 Р.
+            .goods-item
+              a(href="")
+                img(src="img/Perforator_3000.jpg", alt="Perforator_3000")
+              .hidden
+                a(href="") купить
+                button(type="submit") в закладки
+              h3.title Перфоратор BOSCH BFG 3000
+              s.old-price 22500 Р.
+              p.price 15500 Р.
+            .goods-item
+              a(href="")
+                img(src="img/Perforator_6000.jpg", alt="Perforator_6000")
+              .hidden
+                a(href="") купить
+                button(type="submit") в закладки
+              h3.title Перфоратор BOSCH BFG 6000
+              s.old-price 30500 Р.
+              p.price 25500 Р.
+            .goods-item
+              a(href="")
+                img(src="img/Perforator_2000.jpg", alt="Perforator_2000")
+              .hidden
+                a(href="") купить
+                button(type="submit") в закладки
+              h3.title Перфоратор BOSCH BFG 2000
+              p.price 12500 Р.
+        section.popular.manufacturer
+          header.popular-header
+            h3 Популярные Производители:
+            a.btn(href="") все производители
+          ul.manufacturers
+            li.manufacturers-item
+              a(href="" target="_blank")
+                img(src="img/bosch.png", alt="bosch")
+            li.manufacturers-item
+              a(href="" target="_blank")
+                img(src="img/Makita.png", alt="Makita")
+            li.manufacturers-item
+              a(href="" target="_blank")
+                img(src="img/DeWALT.png", alt="DeWALT")
+            li.manufacturers-item
+              a(href="" target="_blank")
+                img(src="img/Интерскол.png", alt="Интерскол")
+            li.manufacturers-item
+              a(href="" target="_blank")
+                img(src="img/Hitachi.png", alt="Hitachi")
+            li.manufacturers-item
+              a(href="" target="_blank")
+                img(src="img/LG.png", alt="LG")
+            li.manufacturers-item
+              a(href="" target="_blank")
+                img(src="img/AEG.png", alt="AEG")
+            li.manufacturers-item
+              a(href="" target="_blank")
+                img(src="img/Metabo.png", alt="Metabo")
       .company-info-wrapper
         .service
           h3 Сервисы
@@ -174,13 +174,13 @@ html(lang="ru")
               li.service-tab-item(data-name="3")
                 a(href="") Кредит
             .service-tab-content
-              .service-tab-item.delive
+              .service-tab-item.service-tab-delivery
                 h3 Доставка
                 p Мы с удовольствием доставим ваш товар прямо к вашему подъезду совершенно бесплатно! Ведь мы неплохо заработаем, поднимая его на ваш этаж!
-              .service-tab-item.guarantee
+              .service-tab-item.service-tab-guarantee
                 h3 Гарантия
                 p Если купленный у нас товар поломается или заискрит, а также в случае пожара, спровоцированного его возгоранием,  вы всегда можете быть уверены в нашей гарантии. Мы обменяем сгоревший товар на новый. Дом уж восстановите как-нибудь сами.
-              .service-tab-item.credit
+              .service-tab-item.service-tab-credit
                 h3 Кредит
                 p Залезть в долговую яму стало проще! Кредитные консультанты придут вам на помощь.
                 a(href="") отправить заявку
@@ -199,20 +199,6 @@ html(lang="ru")
             p можете выбрать товар сами, заехав в наш офис:
             iframe(src="https://yandex.ru/map-widget/v1/?um=constructor%3Af7942402afd77c97127f6b87a4f2f23d35437ba63bd0ca024083946f659745f8&amp;source=constructor" width="300" height="158" frameborder="0")
             a.btn(href="") Заблудились? Напишите нам!
-          .send-form.visually-hidden
-            .close
-            form(action="https://echo.htmlacademy.ru/courses" method="post")
-              p.name.half-width
-                label(for="introduce") Ваше имя:
-                input(type="text" name="introduce" placeholder="Имя Фамилия")
-              p.e-mail.half-width
-                label(for="e-mail") Ваш e-mail:
-                input(type="text" name="e-mail" placeholder="email@example.com")
-              p.text.full-width
-                label(for="text") Текст письма:
-                textarea(name="text" placeholder="В свободной форме" rows="6")
-              .form-button
-                button.btn(type="submit") отправить
     footer.page-footer
       .footer-container
         .footer-top-row
@@ -255,3 +241,18 @@ html(lang="ru")
           a(href="mailto:mail@htmlacademy.ru") mail@htmlacademy.ru
           p Разработано
           a(href="https://htmlacademy.ru/intensive/htmlcss" target="_blank") htmlacademy.ru
+    .popup-write-us
+      button.close(type='submit')
+      form(action="https://echo.htmlacademy.ru/courses" method="post")
+        p.name.half-width
+          label(for="introduce") Ваше имя:
+          input(type="text" name="introduce" id="introduce" placeholder="Имя Фамилия")
+        p.e-mail.half-width
+          label(for="e-mail") Ваш e-mail:
+          input(type="e-mail" name="e-mail" id="e-mail" placeholder="email@example.com")
+        p.text.full-width
+          label(for="text") Текст письма:
+          textarea(name="message" id="text" placeholder="В свободной форме" rows="6")
+        .form-button
+          button.btn(type="submit") отправить
+    .map

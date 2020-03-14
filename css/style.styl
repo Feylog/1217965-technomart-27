@@ -36,11 +36,14 @@ $color-35 = #f1f1f1
 $color-36 = rgba(0, 0, 0, 0.75)
 $color-37 = #f4f4f4
 $color-38 = #dee3e4
+$color-39 = rgba(255, 255, 255, 0.1)
+$color-40 = rgba(255, 255, 255, 0.2)
+$color-41 = rgba(255, 255, 255, 0.3)
 
 html
   box-sizing border-box
 
-*, *::before, * ::after
+*, *::before, *::after
   box-sizing inherit
 
 @font-face
@@ -79,10 +82,17 @@ html
   font-weight 400
 
 .page
-  margin 0 auto
   $color-01
   font 14px "Cuprum"
   line-height 18px
+
+.page, p, h1
+  margin 0 auto
+
+.container
+  width 960px
+  margin 0 auto
+  padding 0 10px
 
 .visually-hidden
   position absolute
@@ -103,30 +113,38 @@ html
     background-color $color-21
 
 .page-header
-  background-color $color-03
+  background linear-gradient(to bottom, $color-02 42px, $color-03 42px)
 
 .top-row
-  background-color $color-02
   font-size 17px
   text-transform capitalize
 
 .logo-top
+  display inline-block
+  vertical-align top
   box-shadow inset 0 -5px 0 $color-05
   background-color $color-04
   &:hover
     background-color $color-08
   &:active
     background-color $color-21
-
+  img
+    padding 11px 55px
 a
   color $color-01
   text-decoration none
 
 .search
+  display inline-block
+  vertical-align top
+  width 270px
   &:hover
     background-color $color-20
 
 .bookmarks, .cart
+  display inline-block
+  vertical-align top
+  width 150px
   &:hover
     background-color $color-20
   &:active
@@ -147,38 +165,56 @@ a
   opacity 0.3
 
 .order
+  width 150px
   background-color $color-25
   &:hover
     background-color $color-23
   &:active
     background-color $color-24
 
+.middle-row
+  padding 41px 0 44px
+
+.slogan, .address, .authorization
+  display inline-block
+  vertical-align top
+
 .slogan
+  width 196px
   color $color-04
-  font 25px "Cuprum-Italic"
+  font 16px "Cuprum-Italic"
   line-height 23px
-
-.phone-number
-  border 3px solid $color-01
-
-.phone
-  background-image url('../img/icon-phone.svg')
-
-.number
-  color $color-04
-  line-height 21px
-  font-size 21px
+  margin 8px 71px 0 44px
 
 .address
   p
     color $color-06
     line-height 24px
+    margin 0 10px
 
-/* catalog style start */
+.phone-number
+  border 3px solid $color-01
+  padding 13px 52px 11px 15px
+
+.phone
+  display inline-block
+  vertical-align top
+  margin-right 40px
+  background-image url('../img/icon-phone.svg')
+  width 19px
+  height 19px
+
+.number
+  display inline-block
+  vertical-align top
+  color $color-04
+  line-height 21px
+  font-size 21px
 
 .authorization
   font 21px "Cuprum"
   line-height 21px
+  margin 14px 0 0 69px
   a
     color $color-07
     background-color $color-01
@@ -189,14 +225,21 @@ a
       color $color-07
 
 .enter
+  margin-right 10px
+  padding 14px 27px 14px 14px
   path
     &:hover
       fill $color-06
+
+.registration
+  padding 14px 25px 14px
 
 .customer, .logout
   path
     &:hover
       fill $color-06
+
+/* catalog style start */
 
 .personal-item:first-child
     list-style none
@@ -215,22 +258,28 @@ a
 /* catalog style end */
 
 .navigation
+  min-height 60px
   box-shadow inset 0 -5px 0 $color-02
   background-color $color-06
   font-size 17px
   line-height 17px
-
-.navigation
   a
     color $color-01
     text-decoration none
 
+.navigation-list
+  display flex
+  margin 0 auto
+
 .navigation-item
+  flex-grow 1
+  text-align center
   list-style none
   &:hover
     background-color $color-02
   &:active
     background-color $color-26
+  padding 22px 30px
 
 .categories-item
   h3
@@ -242,16 +291,15 @@ a
 .material
   background url('../img/icon-1.svg') no-repeat $color-10
 
-.click
-  background-color $color-07
-  opacity 0.1
+.categories-item-link
+  background-color $color-39
   text-align center
   text-transform uppercase
   text-decoration none
   &:hover
-    opacity 0.2
+    background-color $color-40
   &:active
-    opacity 0.3
+    background-color $color-41
 
 .tool
   background url('../img/icon-2.svg') no-repeat $color-11
@@ -369,6 +417,12 @@ a
     &:active
       color $color-04
       text-decoration none
+  .active
+    opacity 1
+    color $color-04
+    text-decoration none
+    path
+      fill $color-04
 
 .arrow
   path
@@ -470,13 +524,13 @@ a
     &:active
       color $color-06
 
-.delive
+.service-tab-delivery
   background url('../img/Layer_131.png') no-repeat
 
-.guarantee
+.service-tab-guarantee
   background url('../img/Layer_130.png') no-repeat
 
-.credit
+.service-tab-credit
   background url('../img/Layer_119.png') no-repeat
 
 .about
@@ -499,7 +553,7 @@ a
 
 /* cart start */
 
-.good-in-cart
+.cart-popup
   border-top 7px solid $color-04
   box-shadow 0 20px 40px $color-27
   p
@@ -560,7 +614,7 @@ a
 
 /* send form start */
 
-.send-form
+.popup-write-us
   border-top 7px solid $color-04
   box-shadow 0 20px 40px $color-36
   p
@@ -570,7 +624,6 @@ a
   input
     border 2px solid $color-38
     font 13px "pt-sans"
-    color $color-16
 
 .form-button
   background-color $color-37
