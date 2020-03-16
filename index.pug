@@ -7,19 +7,17 @@ html(lang="ru")
     link(rel="stylesheet", href="css/style.css")
   body.page
     header.page-header
-      .container
-        .top-row
+      .top-row
+        .container
           .logo-top
             a(href="")
               img(src="img/logo-technomart.svg" alt="logo")
           .search
             form(action="search.html" method="get")
+              label.search-icon(for="search")
               input(type="text" id="search" placeholder="Поиск:")
-              label(for="search")
-                svg(xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 17 17")
-                  path(fill="#ffffff" d="M17 15.586l-3.542-3.542A7.465 7.465 0 0 0 15 7.5 7.5 7.5 0 1 0 7.5 15c1.71 0 3.282-.579 4.544-1.542L15.586 17 17 15.586zM2 7.5C2 4.467 4.467 2 7.5 2 10.532 2 13 4.467 13 7.5c0 3.032-2.468 5.5-5.5 5.5A5.506 5.506 0 0 1 2 7.5z")
           .bookmarks
-            .bookmarks-icon
+            .bookmark-icon
             a(href="") закладки:
             span 0
           .cart
@@ -27,6 +25,7 @@ html(lang="ru")
             a(href="") корзина:
             span 0
           a.order(href="") оформить заказ
+      .container
         .middle-row
           .slogan
             h2.visually-hidden главные данные
@@ -59,15 +58,17 @@ html(lang="ru")
             li.navigation-item
               a.navigation-link(href="") Контакты
     main.page-content
-      .container
-        section.categories
+      section.categories
+        .container
           .left-column
             .categories-item.material
               h3 материалы
-              a.categories-item-link(href="") на любой вкус
+              .categories-item-link
+                a(href="") на любой вкус
             .categories-item.tool
               h3 инструмент
-              a.categories-item-link(href="") на все случаи
+              .categories-item-link
+                a(href="") на все случаи
             .categories-item.slider
               .slider-item.perf
                 h3 Перфораторы
@@ -85,16 +86,20 @@ html(lang="ru")
           .right-column
             .categories-item.technic
               h3 техника
-              a.categories-item-link(href="") для стройки
+              .categories-item-link
+                a(href="") для стройки
             .categories-item.sale
               h3 скидка 50%
-              a.categories-item-link(href="") на 350 товаров
+              .categories-item-link
+                a(href="") на 350 товаров
             .categories-item.delivery
               h3 доставка
-              a.categories-item-link(href="") бесплатно
-        section.popular.products
+              .categories-item-link
+                a(href="") бесплатно
+      section.popular.products
+        .container
           header.popular-header
-            h3 Популярные товары:
+            h3.popular-title популярные товары:
             a.btn(href="") все популярные товары
           .goods
             .goods-item
@@ -132,104 +137,116 @@ html(lang="ru")
                 button(type="submit") в закладки
               h3.title Перфоратор BOSCH BFG 2000
               p.price 12500 Р.
-        section.popular.manufacturer
+      section.popular.manufacturer
+        .container
           header.popular-header
-            h3 Популярные Производители:
-            a.btn(href="") все производители
+            h3.popular-title.second-title Популярные Производители:
+            a.btn.second-btn(href="") все производители
           ul.manufacturers
             li.manufacturers-item
               a(href="" target="_blank")
-                img(src="img/bosch.png", alt="bosch")
+                img.item-image.bosch(src="img/bosch.png", alt="bosch")
             li.manufacturers-item
               a(href="" target="_blank")
-                img(src="img/Makita.png", alt="Makita")
+                img.item-image.makita(src="img/Makita.png", alt="Makita")
             li.manufacturers-item
               a(href="" target="_blank")
-                img(src="img/DeWALT.png", alt="DeWALT")
+                img.item-image.dewalt(src="img/DeWALT.png", alt="DeWALT")
             li.manufacturers-item
               a(href="" target="_blank")
-                img(src="img/Интерскол.png", alt="Интерскол")
+                img.item-image.interskol(src="img/Интерскол.png", alt="Интерскол")
             li.manufacturers-item
               a(href="" target="_blank")
-                img(src="img/Hitachi.png", alt="Hitachi")
+                img.item-image.hitachi(src="img/Hitachi.png", alt="Hitachi")
             li.manufacturers-item
               a(href="" target="_blank")
-                img(src="img/LG.png", alt="LG")
+                img.item-image.lg(src="img/LG.png", alt="LG")
             li.manufacturers-item
               a(href="" target="_blank")
-                img(src="img/AEG.png", alt="AEG")
+                img.item-image.aeg(src="img/AEG.png", alt="AEG")
             li.manufacturers-item
               a(href="" target="_blank")
-                img(src="img/Metabo.png", alt="Metabo")
+                img.item-image.metabo(src="img/Metabo.png", alt="Metabo")
       .company-info-wrapper
         .service
-          h3 Сервисы
-          p Хороший интернет-магазин отличается от плохого не только ценами! Мы стараемся изо всех сил, чтобы сделать ваши покупки приятными.
-          .wrapper
-            ul.service-tab-nav
-              li.service-tab-item(data-name="1")
-                a(href="") Доставка
-              li.service-tab-item(data-name="2")
-                a(href="") Гарантия
-              li.service-tab-item(data-name="3")
-                a(href="") Кредит
-            .service-tab-content
-              .service-tab-item.service-tab-delivery
-                h3 Доставка
-                p Мы с удовольствием доставим ваш товар прямо к вашему подъезду совершенно бесплатно! Ведь мы неплохо заработаем, поднимая его на ваш этаж!
-              .service-tab-item.service-tab-guarantee
-                h3 Гарантия
-                p Если купленный у нас товар поломается или заискрит, а также в случае пожара, спровоцированного его возгоранием,  вы всегда можете быть уверены в нашей гарантии. Мы обменяем сгоревший товар на новый. Дом уж восстановите как-нибудь сами.
-              .service-tab-item.service-tab-credit
-                h3 Кредит
-                p Залезть в долговую яму стало проще! Кредитные консультанты придут вам на помощь.
-                a(href="") отправить заявку
+          .container
+            .service-title
+              h3 Сервисы
+              p Хороший интернет-магазин отличается от плохого не только ценами! Мы стараемся изо всех сил, чтобы сделать ваши покупки приятными.
+            .service-wrapper
+              ul.service-tab-nav
+                li.service-tab-item(data-name="1")
+                  a(href="") Доставка
+                li.service-tab-item(data-name="2")
+                  a(href="") Гарантия
+                li.service-tab-item(data-name="3")
+                  a(href="") Кредит
+              .service-tab-content
+                .service-tab-item
+                  .text-delivery
+                    h3 Доставка
+                    p Мы с удовольствием доставим ваш товар прямо к вашему подъезду совершенно бесплатно! Ведь мы неплохо заработаем, поднимая его на ваш этаж!
+                  .service-tab-delivery
+                .service-tab-item
+                  .text-guarantee
+                    h3 Гарантия
+                    p Если купленный у нас товар поломается или заискрит, а также в случае пожара, спровоцированного его возгоранием,  вы всегда можете быть уверены в нашей гарантии. Мы обменяем сгоревший товар на новый. Дом уж восстановите как-нибудь сами.
+                  .service-tab-guarantee
+                .service-tab-item
+                  .text-credit
+                    h3 Кредит
+                    p Залезть в долговую яму стало проще! Кредитные консультанты придут вам на помощь.
+                  a(href="") отправить заявку
+                  .service-tab-credit
         .about
-          .company
-            h2 Компания "Техномарт"
-            p.text Настоящий мужской шопинг начинается здесь! огромный выбор товаровдля ремонта и строительства не оставит равнодушным любителей сэкономить на гастарбайтерах.
-            p.text Мы можемдоставить ваш товар в самые отдельные точки России! Техномарт работает со многими ранспортными компаниями:
-            ul.partners
-              li.partner Деловые линии
-              li.partner Автотрейдинг
-              li.partner ЖелДорЭкспедиция
-            a.btn(href="about.html") Подробнее о компании
-          .contacts
-            h2 Контакты
-            p можете выбрать товар сами, заехав в наш офис:
-            iframe(src="https://yandex.ru/map-widget/v1/?um=constructor%3Af7942402afd77c97127f6b87a4f2f23d35437ba63bd0ca024083946f659745f8&amp;source=constructor" width="300" height="158" frameborder="0")
-            a.btn(href="") Заблудились? Напишите нам!
+          .container
+            .company
+              h2 Компания "Техномарт"
+              p.text Настоящий мужской шопинг начинается здесь! огромный выбор товаровдля ремонта и строительства не оставит равнодушным любителей сэкономить на гастарбайтерах.
+              p.text Мы можемдоставить ваш товар в самые отдельные точки России! Техномарт работает со многими ранспортными компаниями:
+              ul.partners
+                li.partner Деловые линии
+                li.partner Автотрейдинг
+                li.partner ЖелДорЭкспедиция
+              a.btn(href="about.html") Подробнее о компании
+            .contacts
+              h2 Контакты
+              p.text Вы можете выбрать товар сами, заехав в наш офис:
+              iframe(src="https://yandex.ru/map-widget/v1/?um=constructor%3Af7942402afd77c97127f6b87a4f2f23d35437ba63bd0ca024083946f659745f8&amp;source=constructor" width="300" height="158" frameborder="0")
+              a.btn(href="") Заблудились? Напишите нам!
     footer.page-footer
-      .footer-container
-        .footer-top-row
+      .footer-top-row
+        .container
           .logo-bottom
             a(href="index.html" alt="logo" aria-label="main-page")
               img(src="img/logo-technomart.svg", alt="logo")
           ul.footer-nav
-            li
+            li.footer-nav-item
               a(href="") Компания
-            li
+            li.footer-nav-item
               a(href="") Новости
-            li
+            li.footer-nav-item
               a(href="catalog.html") Каталог
-            li
+            li.footer-nav-item
               a(href="") Доставка
-            li
+            li.footer-nav-item
               a(href="") Контакты
-        .footer-middle-row
-          p г. Санкт-петербург, ул. Б. Конюшенная, д. 19/8
+      .footer-middle-row
+        .container
+          p.footer-address г. Санкт-петербург, ул. Б. Конюшенная, д. 19/8
             a(href="tel:+78125550555") +7 (812) 555-05-55
           ul.footer-category
-            li
+            li.footer-category-item
               a(href="") Материалы
-            li
+            li.footer-category-item
               a(href="") Техника
-            li
+            li.footer-category-item
               a(href="") Инструмент
-            li
+            li.footer-category-item
               a(href="") Спецпредложения
-        .footer-bottom-row
-          p © 2010-2017 Компания "Техномарт" Все права защищены
+      .footer-bottom-row
+        .container
+          p.footer-rights © 2010-2017 Компания "Техномарт" Все права защищены
           section.socials
             .social-item.vk
               a(href="vk.com" target="_blank" aria-label="vk")
@@ -237,22 +254,23 @@ html(lang="ru")
               a(href="facebook.com" target="_blank" aria-label="facebook")
             .social-item.instagram
               a(href="instagram.com" target="_blank" aria-label="instagram")
-          p Обратная связь
-          a(href="mailto:mail@htmlacademy.ru") mail@htmlacademy.ru
-          p Разработано
-          a(href="https://htmlacademy.ru/intensive/htmlcss" target="_blank") htmlacademy.ru
+          p.feedback Обратная связь
+            a(href="mailto:mail@htmlacademy.ru") mail@htmlacademy.ru
+          p.developed Разработано
+            a(href="https://htmlacademy.ru/intensive/htmlcss" target="_blank") htmlacademy.ru
     .popup-write-us
       button.close(type='submit')
       form(action="https://echo.htmlacademy.ru/courses" method="post")
-        p.name.half-width
-          label(for="introduce") Ваше имя:
-          input(type="text" name="introduce" id="introduce" placeholder="Имя Фамилия")
-        p.e-mail.half-width
-          label(for="e-mail") Ваш e-mail:
-          input(type="e-mail" name="e-mail" id="e-mail" placeholder="email@example.com")
-        p.text.full-width
-          label(for="text") Текст письма:
-          textarea(name="message" id="text" placeholder="В свободной форме" rows="6")
+        .form-container
+          p.form-name.half-width
+            label(for="introduce") Ваше имя:
+            input(type="text" name="introduce" id="introduce" placeholder="Имя Фамилия")
+          p.form-e-mail.half-width
+            label(for="e-mail") Ваш e-mail:
+            input(type="e-mail" name="e-mail" id="e-mail" placeholder="email@example.com")
+          p.form-text.full-width
+            label(for="text") Текст письма:
+            textarea(name="message" id="text" placeholder="В свободной форме" rows="5")
         .form-button
           button.btn(type="submit") отправить
     .map
