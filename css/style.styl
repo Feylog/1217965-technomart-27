@@ -39,7 +39,6 @@ $color-38 = #dee3e4
 $color-39 = rgba(255, 255, 255, 0.1)
 $color-40 = rgba(255, 255, 255, 0.2)
 $color-41 = rgba(255, 255, 255, 0.3)
-$color-42 = rgba(255, 255, 255, 0.25)
 
 html
   box-sizing border-box
@@ -55,28 +54,28 @@ html
   font-weight 400
 
 @font-face
-  font-family "Cuprum-Italic"
-  src url('../fonts/web/cuprumitalic.woff2') format(woff2),
-      url('../fonts/web/cuprumitalic.woff') format(woff)
+  font-family "Cuprum"
+  src url('../fonts/web/cuprumitalic.woff2') format('woff2'),
+      url('../fonts/web/cuprumitalic.woff') format('woff')
   font-style italic
   font-weight 400
 
 @font-face
-  font-family "Cuprum-Bold"
+  font-family "Cuprum"
   src url('../fonts/web/cuprumbold.woff2') format('woff2'),
       url('../fonts/web/cuprumbold.woff') format('woff')
   font-style normal
   font-weight 700
 
 @font-face
-  font-family "pt-sans-bold"
+  font-family "PT-Sans"
   src url('../fonts/web/ptsansbold.woff2') format('woff2'),
       url('../fonts/web/ptsansbold.woff') format('woff')
   font-style normal
   font-weight 700
 
 @font-face
-  font-family "pt-sans"
+  font-family "PT-Sans"
   src url('../fonts/web/ptsans.woff2') format('woff2'),
       url('../fonts/web/ptsans.woff') format('woff')
   font-style normal
@@ -84,7 +83,8 @@ html
 
 .page
   $color-01
-  font 14px "Cuprum"
+  font-family "Cuprum", Arial, sans-serif
+  font-size 14px
   line-height 18px
 
 .page, p, h1, h2, h3
@@ -141,19 +141,21 @@ a
   text-decoration none
 
 .search
+  form
+    height 100%
   margin-left 270px
   input
+    height inherit
     width 100%
     background inherit
     color $color-01
+    display flex
+    border none
   width 270px
   &:hover
     background-color $color-20
 
 .search-icon
-  background url('../img/icon-search.svg')
-  width 17px
-  height 17px
   &:hover
     fill $color-01
 
@@ -213,7 +215,9 @@ a
 .slogan
   width 196px
   color $color-04
-  font 16px "Cuprum-Italic"
+  font-size 16px
+  font-family "Cuprum"
+  font-style italic
   line-height 23px
   margin 8px 71px 0 44px
 
@@ -243,7 +247,8 @@ a
   font-size 21px
 
 .authorization
-  font 21px "Cuprum"
+  font-size 21px
+  font-family "Cuprum"
   line-height 21px
   margin 14px 0 0 69px
   a
@@ -310,7 +315,10 @@ a
     background-color $color-02
   &:active
     background-color $color-26
+
+.navigation-link
   padding 22px 30px
+  display inline-flex
 
 .categories
   margin-top 59px
@@ -327,42 +335,49 @@ a
   padding 26px 0 22px 23px
   h3
     color $color-01
-    font 24px "Cuprum-Bold"
+    font-size 24px
+    font-family "Cuprum"
+    font-weight bold
     line-height 21px
     text-transform capitalize
     margin-bottom 16px
+  a
+    display inline-flex
+    width 135px
+    background-color $color-39
+    padding 14px 0
+    justify-content center
+    text-transform uppercase
+    text-decoration none
+    line-height 10px
+    &:hover
+      background-color $color-40
+    &:active
+      background-color $color-41
 
 .material, .tool
   display inline-block
   vertical-align top
 
-.categories-item-link
-  width 135px
-  background-color $color-39
-  padding 14px 0
-  text-align center
-  text-transform uppercase
-  text-decoration none
-  line-height 10px
-  &:hover
-    background-color $color-40
-  &:active
-    background-color $color-41
-
 .material
   background url('../img/icon-1.svg') no-repeat $color-10
+  background-position right 43px bottom 27px
 
 .tool
   background url('../img/icon-2.svg') no-repeat $color-11
+  background-position right 28px bottom 29px
 
 .technic
   background url('../img/icon-3.svg') no-repeat $color-12
+  background-position right 31px bottom 30px
 
 .sale
   background url('../img/icon-4.svg') no-repeat $color-13
+  background-position right 45px bottom 25px
 
 .delivery
   background url('../img/icon-5.svg') no-repeat $color-14
+  background-position right 31px bottom 28px
 
 .slider
   width 620px
@@ -370,7 +385,9 @@ a
 .slider-item
   h3
     color $color-01
-    font 36px "Cuprum-Bold"
+    font-size 36px
+    font-family "Cuprum"
+    font-weight bold
     line-height 36px
     text-transform uppercase
   p
@@ -399,7 +416,8 @@ a
 .breadcrumbs-item
   list-style none
   a
-    font 13px "pt-sans"
+    font-size 13px
+    font-family "PT-Sans"
     color $color-07
     text-transform uppercase
 
@@ -422,11 +440,14 @@ a
     text-transform uppercase
 
 .aside
-  font 17px "pt-sans-bold"
+  font-size 17px
+  font-family "PT-Sans"
+  font-weight bold
   line-height 30px
   text-transform uppercase
   button
-    font 13px "pt-sans"
+    font-size 13px
+    font-family "PT-Sans"
     border 1px solid $color-30
     background-color $color-01
 
@@ -438,23 +459,28 @@ a
   border-bottom 1px solid
 
 .filter
-  font 13px "pt-sans"
+  font-size 13px
+  font-family "PT-Sans"
   background-color $color-33
 
 .choose-price
-  font 17px "pt-sans"
+  font-size 17px
+  font-family "PT-Sans"
   input
     background-color $color-33
 
 .choose-filter
   label
-    font 15px "pt-sans"
+    font-size 15px
+    font-family "PT-Sans"
     line-height 20px
 
 .sort
   background-color $color-33
-  font 13px "pt-sans"
+  font-size 13px
+  font-family "PT-Sans"
   text-transform uppercase
+  width 100%
 
 .sort-list, .arrows
   list-style none
@@ -463,7 +489,8 @@ a
     vertical-align top
     opacity .3
     color $color-07
-    font 13px "pt-sans"
+    font-size 13px
+    font-family "PT-Sans"
     text-decoration underline $color-04
     &:hover
       opacity 1
@@ -495,7 +522,7 @@ a
   margin-bottom 20px
   .popular-title
     margin 0 auto
-    padding 33px 363px 0 35px
+    padding 33px 349px 0 35px
     color $color-06
     font-size 30px
     line-height 30px
@@ -507,24 +534,35 @@ a
     padding 14px 55px
     display inline-block
   .second-title
-    padding 33px 266px 30px 30px
+    padding 33px 245px 30px 30px
   .second-btn
     padding 13px 69px
 
 .goods
   display flex
+  flex-wrap wrap
   margin-bottom 20px
 
 .goods-item
-  display flex
-  flex-direction column
+  width 220px
   margin 0 auto
-  font 17px "pt-sans-bold"
+  display flex
+  position relative
+  flex-direction column
+  font-size 17px
+  font-family "PT-Sans"
+  font-weight bold
   line-height 18px
   &:hover
     box-shadow 0 10px 25px $color-27
   &:hover > .hidden
-    display block
+    display flex
+    flex-direction column
+    a, button
+      width 135px
+      margin-bottom 7px
+      padding 14px 0
+      text-align center
   .title, .old-price, .price
     margin 0 auto
   .title
@@ -546,10 +584,14 @@ a
     margin-top 31px
 
 .hidden
+  position absolute
+  padding 44px 41px 31px
   display none
-  font 14px "Cuprum"
+  font-size 14px
+  font-family "Cuprum"
   line-height 18px
   text-transform uppercase
+  background-color $color-01
   a
     box-shadow inset 0 -3px 0 $color-28
     background-color $color-25
@@ -606,7 +648,8 @@ a
 
 .service
   background-color $color-17
-  font 14px "pt-sans"
+  font-size 14px
+  font-family "PT-Sans"
   line-height 24px
 
 .service-title
@@ -615,7 +658,8 @@ a
   margin-bottom 28px
   h3
     margin 0 auto 35px
-    font 30px "Cuprum"
+    font-size 30px
+    font-family "Cuprum"
     line-height 30px
     text-transform uppercase
 
@@ -625,9 +669,8 @@ a
 .service-tab-nav
   padding 47px 0
   list-style none
-  margin 0 80px 0 0
+  margin 0 80px 99px 0
   width 240px
-  border-right 10px solid $color-42
   li
     box-shadow 0 1px 0 $color-02, inset 0 1px 0 $color-09
     background-color $color-06
@@ -640,18 +683,40 @@ a
   a
     &:active
       color $color-06
-  .service-tab-item
+  .service-nav-item
     padding 21px 0 20px 22px
-    font 21px "Cuprum-Bold"
+    font-size 21px
+    font-family "Cuprum"
+    font-weight bold
     line-height 30px
+
+.service-tab-nav:after
+  position absolute
+  content ''
+  display block
+  right 0
+  width 10px
+  height 279px
+  opacity 0.25
+  background-color $color-41
 
 .service-tab-content
   padding-top 48px
+  width 620px
+  display flex
+  flex-direction column
   h3
-    font 36px "Cuprum"
+    font-size 36px
+    font-family "Cuprum"
     line-height 36px
     text-transform uppercase
     margin-bottom 33px
+
+.service-tab-item
+  display none
+
+.active
+  display block
 
 .text-delivery, .text-guarantee, .text-credit
   font-size 13px
@@ -661,22 +726,24 @@ a
   width 379px
 .text-credit
   width 279px
+  margin-bottom 31px
 
 .service-tab-delivery
   background url('../img/Layer_131.png') no-repeat
-  width 468px
   height 261px
-  margin-top 21px
+  background-position top 21px right 1px
 
 .service-tab-guarantee
   background url('../img/Layer_130.png') no-repeat
-  width 389px
   height 283px
+  background-position top 1px right 1px
 
 .service-tab-credit
   background url('../img/Layer_119.png') no-repeat
-  width 465px
   height 285px
+  background-position top 1px right 1px
+  .btn
+    padding 14px 44px
 
 .about
   margin 82px 0 86px
@@ -686,7 +753,8 @@ a
     text-transform uppercase
     margin 0 0 35px
   .text
-    font 13px "pt-sans"
+    font-size 13px
+    font-family "PT-Sans"
     line-height 24px
     margin-bottom 35px
     width 519px
@@ -712,12 +780,15 @@ a
   margin 0
   padding-left 0
   position relative
-  .partner
+  .partners-item
     margin-bottom 17px
-  .partner:before
+    position relative
+    padding-left 35px
+  .partners-item:before
     content ""
     position absolute
     left 0
+    top 10px
     width 25px
     height 2px
     background-color $color-04
@@ -736,7 +807,8 @@ a
 /* catalog styles start */
 
 .pager
-  font 13px "pt-sans"
+  font-size 13px
+  font-family "PT-Sans"
   line-height 18px
   color $color-01
 
@@ -747,7 +819,8 @@ a
   border 1px solid $color-30
   background-color $color-01
   a
-    font 13px "PT Sans"
+    font-size 13px
+    font-family "PT-Sans"
     color $color-07
     text-transform uppercase
   &:hover
@@ -765,7 +838,8 @@ a
     line-height 30px
     text-transform uppercase
   p
-    font 13px "pt-sans"
+    font-size 13px
+    font-family "PT-Sans"
     line-height 24px
 
 /* catalog styles end */
@@ -946,7 +1020,8 @@ a
     margin-bottom 13px
   input
     border 2px solid $color-38
-    font 13px "pt-sans"
+    font-size 13px
+    font-family "PT-Sans"
 
 .form-button
   padding 37px 80px
@@ -954,9 +1029,6 @@ a
   .btn
     padding 14px 198px
     color $color-01
-
-.close
-  float right
 
 /* send form end */
 
@@ -980,9 +1052,11 @@ a
   height 66px
 
 .close
-  background url('../img/icon-close.svg')
-  width 21px
-  height 21px
-
+  background url('../img/icon-close.svg') no-repeat
+  padding 20px
+  background-position center
+  border none
+  position absolute
+  right 60px
 /* cart popup end */
 
