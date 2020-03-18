@@ -277,11 +277,17 @@ a
 
 /* catalog style start */
 
+.personal
+  display flex
+  padding-left 0
+
 .personal-item:first-child
-    list-style none
+  list-style none
+  margin-right 30px
 
 .personal-item
   a
+    background-color $color-03
     color $color-06
     font-size 16px
     text-decoration underline
@@ -341,7 +347,7 @@ a
     line-height 21px
     text-transform capitalize
     margin-bottom 16px
-  a
+  .btn:not(:nth-child(3))
     display inline-flex
     width 135px
     background-color $color-39
@@ -381,8 +387,13 @@ a
 
 .slider
   width 620px
+  display flex
+  flex-direction column
+  padding 0
+  margin 0
 
 .slider-item
+  padding 26px 0 22px 25px
   h3
     color $color-01
     font-size 36px
@@ -394,11 +405,17 @@ a
     font-size 18px
     line-height 24px
     color $color-01
+    margin-bottom 113px
+  .btn
+    padding 14px 45px
 
 .perf
+  height 266px
   background url('../img/perf.jpg') no-repeat
 
 .drill
+  display none
+  height 266px
   background url('../img/drill.jpg') no-repeat
 
 .prev
@@ -413,6 +430,11 @@ a
 
 /* catalog styles start */
 
+.breadcrumbs
+  display flex
+  padding-left 0
+  margin 23px 0
+
 .breadcrumbs-item
   list-style none
   a
@@ -425,7 +447,6 @@ a
   background url('../img/icon-home.svg') no-repeat
   width 14px
   height 12px
-
   a
     display inline-block
     vertical-align top
@@ -433,13 +454,22 @@ a
     height 100%
 
 .content-title
-    background-color $color-32
-    color $color-06
-    font-size 30px
-    line-height 30px
-    text-transform uppercase
+  padding 32px 0 34px 30px
+  background-color $color-32
+  color $color-06
+  font-size 30px
+  line-height 30px
+  text-transform uppercase
+
+.catalog-filter
+  display flex
+  margin-top 20px
 
 .aside
+  margin-right 20px
+  width 221px
+  display flex
+  flex-direction column
   font-size 17px
   font-family "PT-Sans"
   font-weight bold
@@ -448,8 +478,12 @@ a
   button
     font-size 13px
     font-family "PT-Sans"
+    line-height 18px
+    margin-top 75px
     border 1px solid $color-30
     background-color $color-01
+    padding 12px 39px
+    text-transform uppercase
 
 .choose-filter-0
   border none
@@ -459,8 +493,12 @@ a
   border-bottom 1px solid
 
 .filter
+  padding 14px 0 15px 18px
+  margin 0 0 20px
   font-size 13px
   font-family "PT-Sans"
+  font-weight normal
+  line-height 18px
   background-color $color-33
 
 .choose-price
@@ -476,13 +514,20 @@ a
     line-height 20px
 
 .sort
+  display flex
+  margin-bottom 21px
   background-color $color-33
   font-size 13px
   font-family "PT-Sans"
   text-transform uppercase
   width 100%
 
+.sort-to
+  margin 0
+  padding 14px 0 15px 19px
+
 .sort-list, .arrows
+  display flex
   list-style none
   a
     display inline-block
@@ -538,14 +583,13 @@ a
   .second-btn
     padding 13px 69px
 
-.goods
+.goods, .catalog
   display flex
   flex-wrap wrap
-  margin-bottom 20px
 
 .goods-item
   width 220px
-  margin 0 auto
+  margin-bottom 20px
   display flex
   position relative
   flex-direction column
@@ -582,6 +626,15 @@ a
     margin 13px 36px 21px 43px
   .price:nth-child(4n)
     margin-top 31px
+
+.goods
+  .goods-item:not(:nth-child(4))
+    margin-right 20px
+
+.catalog
+  .goods-item:nth-child(3n)
+    margin-right 19px
+    margin-left 19px
 
 .hidden
   position absolute
@@ -681,14 +734,16 @@ a
       box-shadow 0 1px 0 $color-01, inset 0 1px 0 $color-01
       background-color $color-01
   a
+    padding 21px 0 20px 22px
     &:active
       color $color-06
   .service-nav-item
-    padding 21px 0 20px 22px
     font-size 21px
     font-family "Cuprum"
     font-weight bold
     line-height 30px
+    display flex
+    flex-direction column
 
 .service-tab-nav:after
   position absolute
@@ -813,7 +868,10 @@ a
   color $color-01
 
 .pager-list
+  display flex
+  justify-content center
   list-style none
+  padding-left 0
 
 .pager-item
   border 1px solid $color-30
@@ -832,15 +890,18 @@ a
     color $color-01
 
 .about-puncher
+  padding 67px 0 73px
   background-color $color-29
   h3
     font-size 30px
     line-height 30px
     text-transform uppercase
+    margin-bottom 37px
   p
     font-size 13px
     font-family "PT-Sans"
     line-height 24px
+    margin-right 29px
 
 /* catalog styles end */
 
@@ -1035,21 +1096,34 @@ a
 /* cart popup start */
 
 .cart-popup
+  width 620px
   border-top 7px solid $color-04
   box-shadow 0 20px 40px $color-27
-  p
-    font-size 30px
-    line-height 30px
   button
     text-transform uppercase
 
-.order-buy
-  background-color $color-35
+.popup-message
+  display flex
+  padding 55px 124px 49px 81px
 
 .icon-mark
   background url('../img/icon-mark.svg')
   width 66px
   height 66px
+
+.cart-popup-text
+  margin-top 19px
+  font-size 30px
+  line-height 30px
+
+.order-buy
+  padding 37px 80px
+  background-color $color-35
+  .btn
+    padding 14px 62px 14px 59px
+    margin-right 14px
+  button
+    padding 14px 48px 12px 44px
 
 .close
   background url('../img/icon-close.svg') no-repeat
@@ -1058,5 +1132,6 @@ a
   border none
   position absolute
   right 60px
+
 /* cart popup end */
 

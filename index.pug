@@ -65,12 +65,12 @@ html(lang="ru")
           .left-column
             .categories-item.material
               h3 материалы
-              a(href="") на любой вкус
+              a.btn(href="") на любой вкус
             .categories-item.tool
               h3 инструмент
-              a(href="") на все случаи
+              a.btn(href="") на все случаи
             .categories-item.slider
-              .slider-item.perf
+              .slider-item.perf.active
                 h3 Перфораторы
                 p Настоящие мужские игрушки
                 a.btn(href="catalog.html") Открыть каталог
@@ -86,13 +86,13 @@ html(lang="ru")
           .right-column
             .categories-item.technic
               h3 техника
-              a(href="") для стройки
+              a.btn(href="") для стройки
             .categories-item.sale
               h3 скидка 50%
-              a(href="") на 350 товаров
+              a.btn(href="") на 350 товаров
             .categories-item.delivery
               h3 доставка
-              a(href="") бесплатно
+              a.btn(href="") бесплатно
       section.popular.products
         .container
           header.popular-header
@@ -211,9 +211,8 @@ html(lang="ru")
     footer.page-footer
       .footer-top-row
         .container
-          .logo-bottom
-            a(href="index.html" alt="logo" aria-label="main-page")
-              img(src="img/logo-technomart.svg", alt="logo")
+          a.logo-bottom(href="index.html" alt="logo" aria-label="main-page")
+            img(src="img/logo-technomart.svg", alt="logo")
           ul.footer-nav
             li.footer-nav-item
               a(href="") Компания
