@@ -81,8 +81,9 @@ html(lang="ru")
               .controls
                 button.dot.active(type="button")
                 button.dot(type="button")
-              button.prev(type="button")
-              button.next(type="button")
+              .controls-nav
+                button.prev(type="button")
+                button.next(type="button")
           .right-column
             .categories-item.technic
               h3 техника
@@ -127,6 +128,7 @@ html(lang="ru")
               s.old-price 30500 Р.
               p.price 25500 Р.
             .goods-item
+              .flag-item
               a(href="")
                 img(src="img/Perforator_2000.jpg", alt="Perforator_2000")
               .hidden
@@ -211,7 +213,7 @@ html(lang="ru")
     footer.page-footer
       .footer-top-row
         .container
-          a.logo-bottom(href="index.html" alt="logo" aria-label="main-page")
+          .logo-bottom
             img(src="img/logo-technomart.svg", alt="logo")
           ul.footer-nav
             li.footer-nav-item

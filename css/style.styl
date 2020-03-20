@@ -39,6 +39,11 @@ $color-38 = #dee3e4
 $color-39 = rgba(255, 255, 255, 0.1)
 $color-40 = rgba(255, 255, 255, 0.2)
 $color-41 = rgba(255, 255, 255, 0.3)
+$color-42 = #d7dcde
+$color-43 = #00ca74
+$color-44 = #ababab
+$color-45 = #cfcfcf
+$color-46 = #444444
 
 html
   box-sizing border-box
@@ -141,9 +146,9 @@ a
   text-decoration none
 
 .search
+  margin-left 270px
   form
     height 100%
-  margin-left 270px
   input
     height inherit
     width 100%
@@ -222,6 +227,7 @@ a
   margin 8px 71px 0 44px
 
 .address
+  margin-right 51px
   p
     color $color-06
     line-height 24px
@@ -250,7 +256,7 @@ a
   font-size 21px
   font-family "Cuprum"
   line-height 21px
-  margin 14px 0 0 69px
+  margin 14px 0 0
   a
     color $color-07
     background-color $color-01
@@ -258,6 +264,21 @@ a
       color $color-04
     &:active
       opacity 0.3
+      color $color-07
+
+.user-login
+  display flex
+  width 295px
+  padding 14px 0 11px
+  background-color $color-01
+  .user
+    &:hover
+      color $color-07
+    &:active
+      color $color-34
+  .customer
+    cursor pointer
+    &:hover
       color $color-07
 
 .enter
@@ -271,6 +292,7 @@ a
   padding 14px 25px 14px
 
 .customer, .logout
+  display flex
   path
     &:hover
       fill $color-06
@@ -280,6 +302,7 @@ a
 .personal
   display flex
   padding-left 0
+  margin 10px 0
 
 .personal-item:first-child
   list-style none
@@ -315,7 +338,6 @@ a
 
 .navigation-item
   flex-grow 1
-  text-align center
   list-style none
   &:hover
     background-color $color-02
@@ -386,6 +408,7 @@ a
   background-position right 31px bottom 28px
 
 .slider
+  position relative
   width 620px
   display flex
   flex-direction column
@@ -418,40 +441,75 @@ a
   height 266px
   background url('../img/drill.jpg') no-repeat
 
-.prev
-  background-image url('../img/icon-left.svg')
+.controls
+  display inline-flex
+  position absolute
+  top 220px
+  left 295px
+  width 30px
+  justify-content space-between
+  .active
+    background-color $color-04
+    padding 3px
+
+.dot
+  width 10px
+  height 10px
+  border-radius 50%
+  padding 2px
+  cursor pointer
+
+.prev, .next
   width 22px
   height 40px
+  border none
+  position absolute
+  top 114px
+  padding 0
+
+.prev
+  background-image url('../img/icon-left.svg')
+  left 25px
 
 .next
   background-image url('../img/icon-right.svg')
-  width 22px
-  height 40px
+  right 20px
 
 /* catalog styles start */
 
 .breadcrumbs
   display flex
   padding-left 0
-  margin 23px 0
+  margin 0
+  position relative
 
 .breadcrumbs-item
   list-style none
-  a
-    font-size 13px
-    font-family "PT-Sans"
-    color $color-07
-    text-transform uppercase
+
+.breadcrumbs-item-link
+  font-size 13px
+  font-family "PT-Sans"
+  color $color-07
+  text-transform uppercase
+  padding 23px 17px
+  display inline-flex
+
+.breadcrumbs-item:not(:last-child):after
+  position absolute
+  content ''
+  display block
+  top 25px
+  left 212px
+  width 8px
+  height 12px
+  background url('../img/icon-right-small.svg')
 
 .home
   background url('../img/icon-home.svg') no-repeat
   width 14px
   height 12px
-  a
-    display inline-block
-    vertical-align top
-    width 100%
-    height 100%
+  background-position right 0 top 25px
+  padding-left 0
 
 .content-title
   padding 32px 0 34px 30px
@@ -484,13 +542,70 @@ a
     background-color $color-01
     padding 12px 39px
     text-transform uppercase
+    cursor pointer
 
-.choose-filter-0
+.choose-filter-range
   border none
+  padding 0
+
+.range-filter
+  margin 21px 0 25px
+
+.range-controls
+  position relative
+  margin-bottom 9px
+  width 220px
+  padding 39px 20px
+  background-color $color-33
+  border-radius 5px
+  .scale
+    height 2px
+    background-color $color-42
+  .bar
+    width 152px
+    height 2px
+    background $color-43
+  .toggle
+    position absolute
+    top 31px
+    left 0
+    width 4px
+    height 4px
+    padding 0
+    border 8px solid $color-01
+    background-color $color-44
+    border-radius 50%
+    box-shadow 0 2px 1px 0 $color-45
+    cursor pointer
+  .toggle-min
+    left 12px
+  .toggle-max
+    left 164px
+
+.price-controls
+  display flex
+  justify-content space-between
+  input
+    width 95px
+    padding 12px 0 12px 26px
+    border none
+    border-radius 5px
+    background $color-33
+    text-align center
+    position relative
+  input:first-child:after
+    content ""
+    position absolute
+    top 689px
+    left 235px
+    width 10px
+    height 1px
+    background-color $color-46
 
 .choose-filter
   border none
   border-bottom 1px solid
+  padding 0
 
 .filter
   padding 14px 0 15px 18px
@@ -520,18 +635,22 @@ a
   font-size 13px
   font-family "PT-Sans"
   text-transform uppercase
-  width 100%
+  width 700px
 
 .sort-to
   margin 0
-  padding 14px 0 15px 19px
+  padding 14px 139px 15px 19px
+
+.sort-list
+  width 355px
 
 .sort-list, .arrows
   display flex
+  justify-content space-between
   list-style none
+  padding-left 0
+  margin 14px 0 15px
   a
-    display inline-block
-    vertical-align top
     opacity .3
     color $color-07
     font-size 13px
@@ -548,6 +667,10 @@ a
     text-decoration none
     path
       fill $color-04
+
+.arrows
+  margin-left 45px
+  width 43px
 
 .arrow
   path
@@ -607,6 +730,7 @@ a
       margin-bottom 7px
       padding 14px 0
       text-align center
+
   .title, .old-price, .price
     margin 0 auto
   .title
@@ -637,6 +761,7 @@ a
     margin-left 19px
 
 .hidden
+  width 220px
   position absolute
   padding 44px 41px 31px
   display none
@@ -653,6 +778,8 @@ a
     &:active
       background-color $color-24
   button
+    cursor pointer
+    background-color $color-01
     text-transform uppercase
     border 3px solid $color-25
     &:hover
@@ -660,6 +787,13 @@ a
     &:active
       border 3px solid $color-06
       opacity 0.3
+
+.flag-item
+  background url('../img/new_flag.png')
+  position absolute
+  width 60px
+  height 59px
+  left 160px
 
 .manufacturers
   padding-left 0
@@ -717,13 +851,17 @@ a
     text-transform uppercase
 
 .service-wrapper
-  display inline-flex
+  display flex
+  justify-content space-between
 
 .service-tab-nav
-  padding 47px 0
+  position relative
+  padding 0
+  padding-top 47px
   list-style none
-  margin 0 80px 99px 0
+  margin 0 80px 52px 0
   width 240px
+  flex-shrink 0
   li
     box-shadow 0 1px 0 $color-02, inset 0 1px 0 $color-09
     background-color $color-06
@@ -745,10 +883,21 @@ a
     display flex
     flex-direction column
 
+.service-tab-nav
+  .active
+    box-shadow 0 1px 0 $color-01, inset 0 1px 0 $color-01
+    background-color $color-01
+    &:hover
+      box-shadow 0 1px 0 $color-01, inset 0 1px 0 $color-01
+      background-color $color-01
+    a
+      color $color-06
+
 .service-tab-nav:after
   position absolute
   content ''
   display block
+  top 20px
   right 0
   width 10px
   height 279px
@@ -757,9 +906,7 @@ a
 
 .service-tab-content
   padding-top 48px
-  width 620px
-  display flex
-  flex-direction column
+  width 100%
   h3
     font-size 36px
     font-family "Cuprum"
@@ -769,6 +916,8 @@ a
 
 .service-tab-item
   display none
+  width 100%
+  padding-bottom 120px
 
 .active
   display block
@@ -785,17 +934,14 @@ a
 
 .service-tab-delivery
   background url('../img/Layer_131.png') no-repeat
-  height 261px
   background-position top 21px right 1px
 
 .service-tab-guarantee
   background url('../img/Layer_130.png') no-repeat
-  height 283px
   background-position top 1px right 1px
 
 .service-tab-credit
   background url('../img/Layer_119.png') no-repeat
-  height 285px
   background-position top 1px right 1px
   .btn
     padding 14px 44px
@@ -874,9 +1020,12 @@ a
   padding-left 0
 
 .pager-item
+  margin-right 10px
   border 1px solid $color-30
   background-color $color-01
-  a
+  display flex
+  .pager-item-link
+    padding 14px 16px
     font-size 13px
     font-family "PT-Sans"
     color $color-07
@@ -917,9 +1066,6 @@ a
   padding 20px 41px 25px
   margin-right 164px
   display inline-flex
-  a
-    width 100%
-    height 100%
 
 .footer-nav
   list-style none
@@ -1046,6 +1192,7 @@ a
   width 620px
   border-top 7px solid $color-04
   box-shadow 0 20px 40px $color-36
+  position relative
   p
     font-size 18px
 
@@ -1069,6 +1216,7 @@ a
 .form-text
   textarea
     padding 14px 0 0 16px
+    resize none
 
 .full-width
   display inline-flex
@@ -1090,6 +1238,7 @@ a
   .btn
     padding 14px 198px
     color $color-01
+    border none
 
 /* send form end */
 
@@ -1099,8 +1248,10 @@ a
   width 620px
   border-top 7px solid $color-04
   box-shadow 0 20px 40px $color-27
+  position relative
   button
     text-transform uppercase
+    border none
 
 .popup-message
   display flex
@@ -1124,6 +1275,8 @@ a
     margin-right 14px
   button
     padding 14px 48px 12px 44px
+    border none
+    cursor pointer
 
 .close
   background url('../img/icon-close.svg') no-repeat
@@ -1131,7 +1284,8 @@ a
   background-position center
   border none
   position absolute
-  right 60px
+  right 0px
+  top -4px
 
 /* cart popup end */
 
