@@ -200,7 +200,7 @@ a {
   font-family: "Cuprum";
   font-style: italic;
   line-height: 23px;
-  margin: 8px 71px 0 44px;
+  margin: 7px 71px 0 44px;
 }
 .address {
   margin-right: 51px;
@@ -233,7 +233,6 @@ a {
   font-size: 21px;
   font-family: "Cuprum";
   line-height: 21px;
-  margin: 14px 0 0;
 }
 .authorization a {
   color: #000;
@@ -246,11 +245,17 @@ a {
   opacity: 0.3;
   color: #000;
 }
+.user-enter {
+  display: flex;
+}
 .user-login {
   display: flex;
   width: 295px;
   padding: 14px 0 11px;
   background-color: #fff;
+}
+.user-login .user {
+  margin: 0 33px 0 14px;
 }
 .user-login .user:hover {
   color: #000;
@@ -260,11 +265,13 @@ a {
 }
 .user-login .customer {
   cursor: pointer;
+  margin-left: 13px;
 }
 .user-login .customer:hover {
   color: #000;
 }
 .enter {
+  width: 121px;
   margin-right: 10px;
   padding: 14px 27px 14px 14px;
 }
@@ -272,6 +279,7 @@ a {
   fill: #32425c;
 }
 .registration {
+  width: 150px;
   padding: 14px 25px 14px;
 }
 .customer,
@@ -282,11 +290,14 @@ a {
 .logout path:hover {
   fill: #32425c;
 }
+.logout {
+  margin-right: 10px;
+}
 /* catalog style start */
 .personal {
   display: flex;
   padding-left: 0;
-  margin: 10px 0;
+  margin: 3px 0 0 17px;
 }
 .personal-item:first-child {
   list-style: none;

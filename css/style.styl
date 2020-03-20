@@ -224,7 +224,7 @@ a
   font-family "Cuprum"
   font-style italic
   line-height 23px
-  margin 8px 71px 0 44px
+  margin 7px 71px 0 44px
 
 .address
   margin-right 51px
@@ -256,7 +256,6 @@ a
   font-size 21px
   font-family "Cuprum"
   line-height 21px
-  margin 14px 0 0
   a
     color $color-07
     background-color $color-01
@@ -266,22 +265,28 @@ a
       opacity 0.3
       color $color-07
 
+.user-enter
+  display flex
+
 .user-login
   display flex
   width 295px
   padding 14px 0 11px
   background-color $color-01
   .user
+    margin 0 33px 0 14px
     &:hover
       color $color-07
     &:active
       color $color-34
   .customer
     cursor pointer
+    margin-left 13px
     &:hover
       color $color-07
 
 .enter
+  width 121px
   margin-right 10px
   padding 14px 27px 14px 14px
   path
@@ -289,6 +294,7 @@ a
       fill $color-06
 
 .registration
+  width 150px
   padding 14px 25px 14px
 
 .customer, .logout
@@ -297,12 +303,15 @@ a
     &:hover
       fill $color-06
 
+.logout
+  margin-right 10px
+
 /* catalog style start */
 
 .personal
   display flex
   padding-left 0
-  margin 10px 0
+  margin 3px 0 0 17px
 
 .personal-item:first-child
   list-style none
