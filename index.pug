@@ -19,12 +19,10 @@ html(lang="ru")
                 svg(xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 17 17")
                   path(fill="#ffffff" d="M17 15.586l-3.542-3.542A7.465 7.465 0 0 0 15 7.5 7.5 7.5 0 1 0 7.5 15c1.71 0 3.282-.579 4.544-1.542L15.586 17 17 15.586zM2 7.5C2 4.467 4.467 2 7.5 2 10.532 2 13 4.467 13 7.5c0 3.032-2.468 5.5-5.5 5.5A5.506 5.506 0 0 1 2 7.5z")
           .bookmarks
-            .bookmark-icon
-            a(href="") закладки:
+            a.bookmark-icon(href="") закладки:
             span 0
           .cart
-            .cart-icon
-            a(href="") корзина:
+            a.cart-icon(href="") корзина:
             span 0
           a.order(href="") оформить заказ
       .container
@@ -105,7 +103,7 @@ html(lang="ru")
               a(href="")
                 img(src="img/Perforator_9000.jpg", alt="Perforator_9000")
               .hidden
-                a(href="") купить
+                a.buy(href="") купить
                 button(type="submit") в закладки
               h3.title Перфоратор BOSCH BFG 9000
               s.old-price 32500 Р.
@@ -114,7 +112,7 @@ html(lang="ru")
               a(href="")
                 img(src="img/Perforator_3000.jpg", alt="Perforator_3000")
               .hidden
-                a(href="") купить
+                a.buy(href="") купить
                 button(type="submit") в закладки
               h3.title Перфоратор BOSCH BFG 3000
               s.old-price 22500 Р.
@@ -123,7 +121,7 @@ html(lang="ru")
               a(href="")
                 img(src="img/Perforator_6000.jpg", alt="Perforator_6000")
               .hidden
-                a(href="") купить
+                a.buy(href="") купить
                 button(type="submit") в закладки
               h3.title Перфоратор BOSCH BFG 6000
               s.old-price 30500 Р.
@@ -133,7 +131,8 @@ html(lang="ru")
               a(href="")
                 img(src="img/Perforator_2000.jpg", alt="Perforator_2000")
               .hidden
-                a(href="") купить
+                .flag-item
+                a.buy(href="") купить
                 button(type="submit") в закладки
               h3.title Перфоратор BOSCH BFG 2000
               p.price 12500 Р.
@@ -209,7 +208,7 @@ html(lang="ru")
             .contacts
               h2 Контакты
               p.text Вы можете выбрать товар сами, заехав в наш офис:
-              iframe(src="https://yandex.ru/map-widget/v1/?um=constructor%3Af7942402afd77c97127f6b87a4f2f23d35437ba63bd0ca024083946f659745f8&amp;source=constructor" width="300" height="158" frameborder="0")
+              iframe(src="https://yandex.ru/map-widget/v1/?um=constructor%3Af7942402afd77c97127f6b87a4f2f23d35437ba63bd0ca024083946f659745f8&amp;source=constructor" width="300" height="158")
               a.btn(href="") Заблудились? Напишите нам!
     footer.page-footer
       .footer-top-row
@@ -262,8 +261,8 @@ html(lang="ru")
             label(for="introduce") Ваше имя:
             input(type="text" name="introduce" id="introduce" placeholder="Имя Фамилия")
           p.form-e-mail.half-width
-            label(for="e-mail") Ваш e-mail:
-            input(type="e-mail" name="e-mail" id="e-mail" placeholder="email@example.com")
+            label(for="email") Ваш e-mail:
+            input(type="email" name="email" id="email" placeholder="email@example.com")
           p.form-text.full-width
             label(for="text") Текст письма:
             textarea(name="message" id="text" placeholder="В свободной форме" rows="5")
