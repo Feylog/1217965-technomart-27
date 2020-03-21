@@ -44,8 +44,8 @@
                 </svg>
                 <p class="user">Равшан Джамшутович</p></a><a class="logout" href="">
                 <svg xmlns="http://www.w3.org/2000/svg" width="20" height="17" viewBox="0 0 20 17">
-                  <path fill="#c5c5c5" d="M14.875 8.5L6 0v6H0v5h6v6z"></path>
-                  <path fill="#c5c5c5" d="M16.986 15.01h-5.027V17h5.027c2.178 0 3.004-1.81 3.029-3.026V3.028C19.99 1.811 19.164 0 16.986 0h-5.027v1.99h5.027c.839 0 .992.681 1.01 1.057v10.904c-.017.376-.171 1.059-1.01 1.059z"></path>
+                  <path d="M14.875 8.5L6 0v6H0v5h6v6z"></path>
+                  <path d="M16.986 15.01h-5.027V17h5.027c2.178 0 3.004-1.81 3.029-3.026V3.028C19.99 1.811 19.164 0 16.986 0h-5.027v1.99h5.027c.839 0 .992.681 1.01 1.057v10.904c-.017.376-.171 1.059-1.01 1.059z"></path>
                 </svg></a></div>
             <ul class="personal">
               <li class="personal-item"><a class="personal-item-link" href="">Мои Заказы</a></li>
@@ -91,43 +91,48 @@
                   </div>
                   <div class="price-controls">
                     <input name="min-price" type="number" value="0">
+                    <p>-</p>
                     <input name="max-price" type="number" value="30000">
                   </div>
                 </div>
               </fieldset>
-              <fieldset class="choose-filter">
+              <fieldset class="choose-filter-checkbox">
                 <legend>Производители:</legend>
-                <p>
-                  <input class="visually-hidden" type="checkbox" name="bosch" id="bosch" checked>
-                  <label for="bosch">bosch</label>
-                </p>
-                <p>
-                  <input class="visually-hidden" type="checkbox" name="interscol" id="interscol">
-                  <label for="interscol">интерскол</label>
-                </p>
-                <p>
-                  <input class="visually-hidden" type="checkbox" name="makita" id="makita" checked>
-                  <label for="makita">makita</label>
-                </p>
-                <p>
-                  <input class="visually-hidden" type="checkbox" name="dewalt" id="dewalt">
-                  <label for="dewalt">dewalt</label>
-                </p>
-                <p>
-                  <input class="visually-hidden" type="checkbox" name="hitachi" id="hitachi">
-                  <label for="hitachi">hitachi</label>
-                </p>
+                <ul class="choose-filter-list">
+                  <li class="choose-filter-item">
+                    <input class="visually-hidden filter-input filter-input-checkbox" type="checkbox" name="bosch" id="bosch" checked>
+                    <label for="bosch">bosch</label>
+                  </li>
+                  <li class="choose-filter-item">
+                    <input class="visually-hidden filter-input filter-input-checkbox" type="checkbox" name="interscol" id="interscol">
+                    <label for="interscol">интерскол</label>
+                  </li>
+                  <li class="choose-filter-item">
+                    <input class="visually-hidden filter-input filter-input-checkbox" type="checkbox" name="makita" id="makita" checked>
+                    <label for="makita">makita</label>
+                  </li>
+                  <li class="choose-filter-item">
+                    <input class="visually-hidden filter-input filter-input-checkbox" type="checkbox" name="dewalt" id="dewalt">
+                    <label for="dewalt">dewalt</label>
+                  </li>
+                  <li class="choose-filter-item">
+                    <input class="visually-hidden filter-input filter-input-checkbox" type="checkbox" name="hitachi" id="hitachi">
+                    <label for="hitachi">hitachi</label>
+                  </li>
+                </ul>
               </fieldset>
-              <fieldset class="choose-filter">
+              <fieldset class="choose-filter-radio">
                 <legend>питание:</legend>
-                <p>
-                  <input class="visually-hidden" type="radio" name="charge" value="accum" id="accum" checked>
-                  <label for="accum">аккумуляторные</label>
-                </p>
-                <p>
-                  <input class="visually-hidden" type="radio" name="charge" value="network" id="network">
-                  <label for="network">сетевые</label>
-                </p>
+                <ul class="choose-filter-list">
+                  <li class="choose-filter-item">
+                    <input class="visually-hidden filter-input filter-input-radio" type="radio" name="charge" value="accum" id="accum" checked>
+                    <label for="accum">аккумуляторные</label>
+                  </li>
+                  <li class="choose-filter-item">
+                    <input class="visually-hidden filter-input filter-input-radio" type="radio" name="charge" value="network" id="network">
+                    <label for="network">сетевые</label>
+                  </li>
+                </ul>
               </fieldset>
               <button type="submit">Показать</button>
             </form>
@@ -169,8 +174,7 @@
             </div>
             <div class="goods-item">
               <div class="flag-item"></div><a href=""><img src="img/Perforator_2000.jpg" alt="Perforator_2000"></a>
-              <div class="hidden">
-                <div class="flag-item"></div><a class="buy" href="">купить</a>
+              <div class="hidden"><a class="buy" href="">купить</a>
                 <button type="submit">в закладки</button>
               </div>
               <h3 class="title">Перфоратор BOSCH BFG 2000</h3>
@@ -186,8 +190,7 @@
             </div>
             <div class="goods-item">
               <div class="flag-item"></div><a href=""><img src="img/Perforator_6000.jpg" alt="Perforator_6000"></a>
-              <div class="hidden">
-                <div class="flag-item"></div><a class="buy" href="">купить</a>
+              <div class="hidden"><a class="buy" href="">купить</a>
                 <button type="submit">в закладки</button>
               </div>
               <h3 class="title">Перфоратор BOSCH BFG 6000</h3>
@@ -203,8 +206,7 @@
             </div>
             <div class="goods-item">
               <div class="flag-item"></div><a href=""><img src="img/Perforator_3000.jpg" alt="Perforator_3000"></a>
-              <div class="hidden">
-                <div class="flag-item"></div><a class="buy" href="">купить</a>
+              <div class="hidden"><a class="buy" href="">купить</a>
                 <button type="submit">в закладки</button>
               </div>
               <h3 class="title">Перфоратор BOSCH BFG 3000</h3>
@@ -240,7 +242,7 @@
       <div class="about-puncher">
         <div class="container">
           <h3>пара слов о перфораторах</h3>
-          <p>Перфоратор — универсальный строительный инструмент. Предназначен для сверления и долбления отверстий в кирпиче, бетоне и камне. Существуют электромеханические и пневматические перфораторы. Современные модели могут выполнять функции дрели, шуруповерта и отбойного молотка. В ассортиментном ряду есть выбор «трехрежимников»: в одном устройстве будут совмещены отбойный молоток и ударная дрель.</p>
+          <p>Перфоратор — универсальный строительный инструмент. Предназначен для сверления и долбления отверстий в кирпиче, бетоне и камне.<br/>Существуют электромеханические и пневматические перфораторы. Современные модели могут выполнять функции дрели, шуруповерта и отбойного молотка. В ассортиментном ряду есть выбор «трехрежимников»: в одном устройстве будут совмещены отбойный молоток и ударная дрель.</p>
         </div>
       </div>
     </main>

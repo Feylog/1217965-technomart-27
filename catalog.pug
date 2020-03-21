@@ -43,8 +43,8 @@ html(lang="ru")
                 p.user Равшан Джамшутович
               a.logout(href="")
                 svg(xmlns="http://www.w3.org/2000/svg" width="20" height="17" viewBox="0 0 20 17")
-                  path(fill="#c5c5c5" d="M14.875 8.5L6 0v6H0v5h6v6z")
-                  path(fill="#c5c5c5" d="M16.986 15.01h-5.027V17h5.027c2.178 0 3.004-1.81 3.029-3.026V3.028C19.99 1.811 19.164 0 16.986 0h-5.027v1.99h5.027c.839 0 .992.681 1.01 1.057v10.904c-.017.376-.171 1.059-1.01 1.059z")
+                  path(d="M14.875 8.5L6 0v6H0v5h6v6z")
+                  path(d="M16.986 15.01h-5.027V17h5.027c2.178 0 3.004-1.81 3.029-3.026V3.028C19.99 1.811 19.164 0 16.986 0h-5.027v1.99h5.027c.839 0 .992.681 1.01 1.057v10.904c-.017.376-.171 1.059-1.01 1.059z")
             ul.personal
               li.personal-item
                 a.personal-item-link(href="") Мои Заказы
@@ -92,32 +92,35 @@ html(lang="ru")
                     .toggle.toggle-max
                   .price-controls
                     input(name="min-price" type="number" value="0")
+                    p -
                     input(name="max-price" type="number" value="30000")
-              fieldset.choose-filter
+              fieldset.choose-filter-checkbox
                 legend Производители:
-                p
-                  input.visually-hidden(type="checkbox" name="bosch" id="bosch" checked)
-                  label(for="bosch") bosch
-                p
-                  input.visually-hidden(type="checkbox" name="interscol" id="interscol")
-                  label(for="interscol") интерскол
-                p
-                  input.visually-hidden(type="checkbox" name="makita" id="makita" checked)
-                  label(for="makita") makita
-                p
-                  input.visually-hidden(type="checkbox" name="dewalt" id="dewalt")
-                  label(for="dewalt") dewalt
-                p
-                  input.visually-hidden(type="checkbox" name="hitachi" id="hitachi")
-                  label(for="hitachi") hitachi
-              fieldset.choose-filter
+                ul.choose-filter-list
+                  li.choose-filter-item
+                    input.visually-hidden.filter-input.filter-input-checkbox(type="checkbox" name="bosch" id="bosch" checked)
+                    label(for="bosch") bosch
+                  li.choose-filter-item
+                    input.visually-hidden.filter-input.filter-input-checkbox(type="checkbox" name="interscol" id="interscol")
+                    label(for="interscol") интерскол
+                  li.choose-filter-item
+                    input.visually-hidden.filter-input.filter-input-checkbox(type="checkbox" name="makita" id="makita" checked)
+                    label(for="makita") makita
+                  li.choose-filter-item
+                    input.visually-hidden.filter-input.filter-input-checkbox(type="checkbox" name="dewalt" id="dewalt")
+                    label(for="dewalt") dewalt
+                  li.choose-filter-item
+                    input.visually-hidden.filter-input.filter-input-checkbox(type="checkbox" name="hitachi" id="hitachi")
+                    label(for="hitachi") hitachi
+              fieldset.choose-filter-radio
                 legend питание:
-                p
-                  input.visually-hidden(type="radio" name="charge" value="accum" id="accum" checked)
-                  label(for="accum") аккумуляторные
-                p
-                  input.visually-hidden(type="radio" name="charge" value="network" id="network")
-                  label(for="network") сетевые
+                ul.choose-filter-list
+                  li.choose-filter-item
+                    input.visually-hidden.filter-input.filter-input-radio(type="radio" name="charge" value="accum" id="accum" checked)
+                    label(for="accum") аккумуляторные
+                  li.choose-filter-item
+                    input.visually-hidden.filter-input.filter-input-radio(type="radio" name="charge" value="network" id="network")
+                    label(for="network") сетевые
               button(type="submit") Показать
           section.catalog
             .sort
@@ -161,7 +164,6 @@ html(lang="ru")
               a(href="")
                 img(src="img/Perforator_2000.jpg", alt="Perforator_2000")
               .hidden
-                .flag-item
                 a.buy(href="") купить
                 button(type="submit") в закладки
               h3.title Перфоратор BOSCH BFG 2000
@@ -180,7 +182,6 @@ html(lang="ru")
               a(href="")
                 img(src="img/Perforator_6000.jpg", alt="Perforator_6000")
               .hidden
-                .flag-item
                 a.buy(href="") купить
                 button(type="submit") в закладки
               h3.title Перфоратор BOSCH BFG 6000
@@ -199,7 +200,6 @@ html(lang="ru")
               a(href="")
                 img(src="img/Perforator_3000.jpg", alt="Perforator_3000")
               .hidden
-                .flag-item
                 a.buy(href="") купить
                 button(type="submit") в закладки
               h3.title Перфоратор BOSCH BFG 3000
@@ -235,7 +235,8 @@ html(lang="ru")
       .about-puncher
         .container
           h3 пара слов о перфораторах
-          p Перфоратор — универсальный строительный инструмент. Предназначен для сверления и долбления отверстий в кирпиче, бетоне и камне. Существуют электромеханические и пневматические перфораторы. Современные модели могут выполнять функции дрели, шуруповерта и отбойного молотка. В ассортиментном ряду есть выбор «трехрежимников»: в одном устройстве будут совмещены отбойный молоток и ударная дрель.
+          p Перфоратор — универсальный строительный инструмент. Предназначен для сверления и долбления отверстий в кирпиче, бетоне и камне.
+            br/ Существуют электромеханические и пневматические перфораторы. Современные модели могут выполнять функции дрели, шуруповерта и отбойного молотка. В ассортиментном ряду есть выбор «трехрежимников»: в одном устройстве будут совмещены отбойный молоток и ударная дрель.
     footer.page-footer
       .footer-top-row
         .container

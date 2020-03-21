@@ -36,15 +36,18 @@ $color-35 = #f1f1f1
 $color-36 = rgba(0, 0, 0, 0.75)
 $color-37 = #f4f4f4
 $color-38 = #dee3e4
-$color-39 = rgba(255, 255, 255, 0.1)
-$color-40 = rgba(255, 255, 255, 0.2)
-$color-41 = rgba(255, 255, 255, 0.3)
+$color-39 = rgba(255, 255, 255, .1)
+$color-40 = rgba(255, 255, 255, .2)
+$color-41 = rgba(255, 255, 255, .3)
 $color-42 = #d7dcde
 $color-43 = #00ca74
 $color-44 = #ababab
 $color-45 = #cfcfcf
 $color-46 = #444444
 $color-47 = #b5b5b5
+$color-48 = rgba(50, 66, 92, .3)
+$color-49 = rgba(181, 181, 181, .3)
+$color-50 = rgb(181, 181, 181)
 
 html
   box-sizing border-box
@@ -94,7 +97,7 @@ html
   line-height 18px
 
 .page, p, h1, h2, h3
-  margin 0 auto
+  margin 0
 
 .container
   width 960px
@@ -107,7 +110,7 @@ html
   width 1px
   overflow hidden
   clip rect(1px 1px 1px 1px)
-  clip rect(1px, 1px, 1px, 1px)
+  clip rect(1px 1px 1px 1px)
   white-space nowrap
 
 .btn
@@ -276,9 +279,6 @@ a
     background-color $color-01
     &:hover
       color $color-04
-    &:active
-      opacity 0.3
-      color $color-07
 
 .user-enter
   display flex
@@ -304,9 +304,18 @@ a
   width 121px
   margin-right 10px
   padding 14px 27px 14px 14px
-  path
-    &:hover
-      fill $color-06
+  display flex
+  flex-direction row-reverse
+  justify-content space-between
+  &:active
+    opacity 0.3
+    color $color-07
+
+.enter > svg
+  fill $color-34
+
+.enter:hover > svg
+  fill $color-06
 
 .registration
   width 150px
@@ -314,12 +323,15 @@ a
 
 .customer, .logout
   display flex
-  path
-    &:hover
-      fill $color-06
 
 .logout
   margin-right 10px
+
+.logout > svg
+  fill $color-34
+
+.logout:hover > svg
+  fill $color-06
 
 /* catalog style start */
 
@@ -340,8 +352,7 @@ a
     &:hover
       color $color-04
     &:active
-      opacity 0.3
-      color $color-06
+      color $color-48
 
 .personal-item:first-child
   .personal-item-link:after
@@ -350,7 +361,7 @@ a
     top 8px
     right 15px
     width 4px
-    height 5px
+    height 4px
     background-color $color-06
     border-radius 50%
   .personal-item-link:active:after
@@ -531,7 +542,7 @@ a
   padding 23px 17px
   display inline-flex
 
-.breadcrumbs-item:not(:last-child):after
+.breadcrumbs-item:not(:last-child):not(:first-child):after
   position absolute
   content ''
   display block
@@ -574,15 +585,25 @@ a
     font-size 13px
     font-family "PT-Sans"
     line-height 18px
-    margin-top 75px
+    margin-top 55px
     border 1px solid $color-30
     background-color $color-01
     padding 12px 39px
     text-transform uppercase
     cursor pointer
 
+.filter
+  padding 14px 0 15px 18px
+  margin 0 0 20px
+  font-size 13px
+  font-family "PT-Sans"
+  font-weight normal
+  line-height 18px
+  background-color $color-33
+
 .choose-filter-range
   border none
+  border-bottom 1px solid
   padding 0
 
 .range-filter
@@ -631,42 +652,77 @@ a
     border-radius 5px
     background $color-33
     text-align center
+  p
+    padding 6px 0
 
-.price-controls:first-child
-  input:after
-    content ""
-    position absolute
-    top 689px
-    left 235px
-    width 10px
-    height 1px
-    background-color $color-46
-
-.choose-filter
+.choose-filter-checkbox
   border none
   border-bottom 1px solid
   padding 0
+  margin-top 25px
 
-.filter
-  padding 14px 0 15px 18px
-  margin 0 0 20px
-  font-size 13px
-  font-family "PT-Sans"
-  font-weight normal
-  line-height 18px
-  background-color $color-33
+.choose-filter-radio
+  border none
+  padding 0
+  margin-top 25px
 
-.choose-price
-  font-size 17px
-  font-family "PT-Sans"
-  input
-    background-color $color-33
+.choose-filter-list
+  list-style none
+  padding-left 0
+  margin 20px 0 0
 
-.choose-filter
+.choose-filter-item
   label
+    position relative
     font-size 15px
-    font-family "PT-Sans"
     line-height 20px
+    font-weight normal
+    padding-left 35px
+    display block
+    cursor pointer
+    margin-bottom 20px
+
+.filter-input-checkbox+label:before
+  content ''
+  position absolute
+  width 23px
+  height 23px
+  background url('../img/checkbox-off.svg') no-repeat
+  top 0
+  left 0
+  background-position 0 0
+
+.filter-input-checkbox:checked+label:after
+  content ''
+  position absolute
+  width 23px
+  height 23px
+  background url('../img/checkbox-on.svg') no-repeat
+  top 0
+  left 0
+  background-position 0 0
+
+.filter-input-radio+label:before
+  content ''
+  position absolute
+  width 25px
+  height 25px
+  background url('../img/radio-off.svg') no-repeat
+  top 0
+  left 0
+  background-position 0 0
+  border-radius 50%
+
+.filter-input-radio:checked+label:after
+  content ''
+  position absolute
+  width 25px
+  height 25px
+  background url('../img/radio-on.svg') no-repeat
+  top 0
+  left 0
+  background-position 0 0
+  border-radius 50%
 
 .sort
   display flex
@@ -770,7 +826,6 @@ a
       margin-bottom 7px
       padding 14px 0
       text-align center
-
   .title, .old-price, .price
     margin 0 auto
   .title
@@ -788,7 +843,11 @@ a
     background url('../img/btn_copy_14.svg') no-repeat
     padding 11px 40px 13px 36px
     margin 13px 36px 21px 43px
-  .price:nth-child(4n)
+
+.goods-item:nth-child(4),
+.goods-item:nth-child(7),
+.goods-item:nth-child(10)
+  .price
     margin-top 31px
 
 .goods
@@ -842,13 +901,6 @@ a
   .buy:hover:before,
   .buy:active:before
     opacity 1
-  .flag-item
-    background url('../img/new_flag.png')
-    position absolute
-    width 60px
-    height 59px
-    left 160px
-    top 0
 
 .flag-item
   background url('../img/new_flag.png')
@@ -856,6 +908,7 @@ a
   width 60px
   height 59px
   left 160px
+  z-index 1
 
 .manufacturers
   padding-left 0
@@ -1093,7 +1146,7 @@ a
   background-color $color-01
   display flex
   .pager-item-link
-    padding 14px 16px
+    padding 14px 19px
     font-size 13px
     font-family "PT-Sans"
     color $color-07
@@ -1123,7 +1176,7 @@ a
     font-family "PT-Sans"
     line-height 24px
     margin 0
-    width 861px
+    width 911px
 
 /* catalog styles end */
 
@@ -1316,6 +1369,7 @@ a
     padding 14px 198px
     color $color-01
     border none
+    cursor pointer
 
 /* send form end */
 
@@ -1363,6 +1417,7 @@ a
   position absolute
   right 0px
   top -4px
+  cursor pointer
 
 /* cart popup end */
 
