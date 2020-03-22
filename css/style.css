@@ -154,7 +154,7 @@ a {
 .search-icon:hover > svg {
   fill: #fff;
 }
-.search+form:focus-within > svg {
+.search:focus-within > svg {
   fill: #ee3643;
 }
 .bookmarks,
@@ -292,6 +292,7 @@ span {
 }
 .user-enter {
   display: flex;
+  margin-left: 61px;
 }
 .enter {
   width: 121px;
