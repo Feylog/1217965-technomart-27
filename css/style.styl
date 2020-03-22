@@ -48,6 +48,9 @@ $color-47 = #b5b5b5
 $color-48 = rgba(50, 66, 92, .3)
 $color-49 = rgba(181, 181, 181, .3)
 $color-50 = rgb(181, 181, 181)
+$color-51 = rgba(0, 0, 0, .3)
+$color-52 = rgb(255, 255, 255)
+$color-53 = rgb(238, 54, 67)
 
 html
   box-sizing border-box
@@ -78,17 +81,17 @@ html
 
 @font-face
   font-family "PT-Sans"
-  src url('../fonts/web/ptsansbold.woff2') format('woff2'),
-      url('../fonts/web/ptsansbold.woff') format('woff')
-  font-style normal
-  font-weight 700
-
-@font-face
-  font-family "PT-Sans"
   src url('../fonts/web/ptsans.woff2') format('woff2'),
       url('../fonts/web/ptsans.woff') format('woff')
   font-style normal
   font-weight 400
+
+@font-face
+  font-family "PT-Sans"
+  src url('../fonts/web/ptsansbold.woff2') format('woff2'),
+      url('../fonts/web/ptsansbold.woff') format('woff')
+  font-style normal
+  font-weight 700
 
 .page
   $color-01
@@ -134,8 +137,10 @@ html
     display flex
 
 .logo-top
-  position absolute
-  box-shadow inset 0 -5px 0 $color-05
+  position relative
+  display flex
+  min-height 100%
+  justify-content center
   background-color $color-04
   &:hover
     background-color $color-08
@@ -143,16 +148,25 @@ html
     background-color $color-21
   img
     padding 11px 55px
-    height 47px
+    width 220px
+
+.logo-top:after
+  content ''
+  position absolute
+  top 100%
+  box-shadow inset 0 -5px 0 $color-05
 
 a
   color $color-01
   text-decoration none
 
 .search
-  margin-left 270px
+  width 270px
   form
+    border none
     height 100%
+    display flex
+    flex-direction row-reverse
   input
     height inherit
     width 100%
@@ -160,13 +174,28 @@ a
     color $color-01
     display flex
     border none
-  width 270px
+    &:focus-within
+      color $color-07
+  input::-webkit-input-placeholder
+    color $color-01
+  input::-moz-placeholder
+    color $color-01
   &:hover
     background-color $color-20
+  &:focus-within
+    background-color $color-01
+  .search-icon
+    padding 12px 15px 13px 17px
+    cursor pointer
 
-.search-icon
-  &:hover
-    fill $color-01
+.search-icon > svg
+  fill $color-41
+
+.search-icon:hover > svg
+  fill $color-52
+
+.search+form:focus-within > svg
+  fill $color-53
 
 .bookmarks, .cart
   display flex
@@ -214,6 +243,7 @@ a
 .bookmark-icon:hover:before,
 .cart-icon:hover:before
   opacity 1
+
 .bookmark-icon:active:before,
 .cart-icon:active:before
   opacity .5
@@ -236,20 +266,19 @@ a
   vertical-align top
 
 .slogan
-  width 196px
+  width 197px
   color $color-04
   font-size 16px
   font-family "Cuprum"
   font-style italic
   line-height 23px
-  margin 7px 71px 0 44px
+  margin 7px 64px 0 51px
 
 .address
-  margin-right 51px
   p
     color $color-06
     line-height 24px
-    margin 0 10px
+    margin 0 15px
 
 .phone-number
   border 3px solid $color-01
@@ -274,42 +303,25 @@ a
   font-size 21px
   font-family "Cuprum"
   line-height 21px
-  a
+  .enter, .registration
     color $color-07
     background-color $color-01
     &:hover
       color $color-04
+    &:active
+      color $color-51
+      background-color $color-01
 
 .user-enter
   display flex
 
-.user-login
-  display flex
-  width 295px
-  padding 14px 0 11px
-  background-color $color-01
-  .user
-    margin 0 32px 0 14px
-    &:hover
-      color $color-07
-    &:active
-      color $color-34
-  .customer
-    cursor pointer
-    margin-left 13px
-    &:hover
-      color $color-07
-
 .enter
   width 121px
-  margin-right 10px
+  margin-right 9px
   padding 14px 27px 14px 14px
   display flex
   flex-direction row-reverse
   justify-content space-between
-  &:active
-    opacity 0.3
-    color $color-07
 
 .enter > svg
   fill $color-34
@@ -317,15 +329,49 @@ a
 .enter:hover > svg
   fill $color-06
 
+.enter:active > svg
+  fill $color-34
+
 .registration
   width 150px
   padding 14px 25px 14px
 
+.user-login
+  display flex
+  width 295px
+  padding 14px 0 11px
+  background-color $color-01
+  margin-left 42px
+  .user
+    display flex
+    flex-direction row-reverse
+    margin 0 37px 0 14px
+    &:hover
+      color $color-07
+    &:active
+      color $color-34
+  .customer
+    color $color-07
+    background-color $color-01
+    &:hover
+      color $color-04
+    cursor pointer
+    margin-left 13px
+    &:hover
+      color $color-07
+    &:active
+      color $color-34
+  span
+    padding 0
+  .customer+span > svg
+    fill $color-34
+  .customer:hover+span > svg
+    fill $color-06
+  .customer:active+span > svg
+    fill $color-34
+
 .customer, .logout
   display flex
-
-.logout
-  margin-right 10px
 
 .logout > svg
   fill $color-34
@@ -333,12 +379,15 @@ a
 .logout:hover > svg
   fill $color-06
 
+.logout:active > svg
+  fill $color-34
+
 /* catalog style start */
 
 .personal
   display flex
   padding-left 0
-  margin 3px 0 0 17px
+  margin 3px 0 0 60px
 
 .personal-item
   list-style none
@@ -385,6 +434,8 @@ a
   margin 0
 
 .navigation-item
+  display flex
+  justify-content center
   flex-grow 1
   list-style none
   &:hover
@@ -394,7 +445,6 @@ a
 
 .navigation-link
   padding 22px 33px
-  display inline-flex
 
 .categories
   margin-top 59px
@@ -402,8 +452,11 @@ a
     display flex
 
 .left-column
+  position relative
   .categories-item
     margin-right 17px
+  .flag-item
+    left 239px
 
 .categories-item
   width 300px
@@ -539,10 +592,10 @@ a
   font-family "PT-Sans"
   color $color-07
   text-transform uppercase
-  padding 23px 17px
+  padding 23px 19px
   display inline-flex
 
-.breadcrumbs-item:not(:last-child):not(:first-child):after
+.breadcrumbs-item:not(:last-child):after
   position absolute
   content ''
   display block
@@ -556,14 +609,16 @@ a
   background url('../img/icon-home.svg') no-repeat
   width 14px
   height 12px
-  background-position right 0 top 25px
+  background-position right 6px top 25px
   padding-left 0
+  margin-right 14px
 
 .content-title
-  padding 32px 0 34px 30px
+  padding 32px 0 34px 28px
   background-color $color-32
   color $color-06
   font-size 30px
+  font-weight normal
   line-height 30px
   text-transform uppercase
 
@@ -593,7 +648,7 @@ a
     cursor pointer
 
 .filter
-  padding 14px 0 15px 18px
+  padding 14px 0 15px 19px
   margin 0 0 20px
   font-size 13px
   font-family "PT-Sans"
@@ -735,7 +790,7 @@ a
 
 .sort-to
   margin 0
-  padding 14px 139px 15px 19px
+  padding 14px 139px 15px 18px
 
 .sort-list
   width 355px
@@ -765,7 +820,7 @@ a
       fill $color-04
 
 .arrows
-  margin-left 45px
+  margin-left 46px
   width 43px
 
 .arrow
@@ -786,21 +841,22 @@ a
   margin-bottom 20px
   .popular-title
     margin 0 auto
-    padding 33px 308px 0 35px
+    padding 33px 330px 0 28px
     color $color-06
     font-size 30px
+    font-weight normal
     line-height 30px
     text-transform uppercase
     display inline-block
     vertical-align top
   .btn
     margin 25px 24px 26px 41px
-    padding 14px 55px
+    padding 12px 55px
     display inline-block
   .second-title
-    padding 33px 205px 30px 30px
+    padding 33px 226px 30px 28px
   .second-btn
-    padding 13px 69px
+    padding 12px 69px
 
 .goods, .catalog
   display flex
@@ -962,6 +1018,7 @@ a
     margin-bottom 35px
     font-size 30px
     font-family "Cuprum"
+    font-weight normal
     line-height 30px
     text-transform uppercase
   p
@@ -1029,6 +1086,7 @@ a
     font-size 36px
     font-family "Cuprum"
     line-height 36px
+    font-weight normal
     text-transform uppercase
     margin-bottom 33px
 
@@ -1069,6 +1127,7 @@ a
   h2
     font-size 30px
     line-height 30px
+    font-weight normal
     text-transform uppercase
     margin 0 0 35px
   .text
@@ -1087,7 +1146,7 @@ a
   display flex
   flex-direction column
   width 520px
-  margin-right 120px
+  margin-right 119px
   .btn
     padding 14px 40px 12px
     margin-top 13px
@@ -1131,7 +1190,7 @@ a
 .pager
   font-size 13px
   font-family "PT-Sans"
-  line-height 18px
+  line-height 9px
   color $color-01
 
 .pager-list
@@ -1141,12 +1200,12 @@ a
   padding-left 0
 
 .pager-item
-  margin-right 10px
+  margin-right 8px
   border 1px solid $color-30
   background-color $color-01
   display flex
   .pager-item-link
-    padding 14px 19px
+    padding 14px 15px
     font-size 13px
     font-family "PT-Sans"
     color $color-07
@@ -1169,6 +1228,7 @@ a
   h3
     font-size 30px
     line-height 30px
+    font-weight normal
     text-transform uppercase
     margin-bottom 37px
   p
@@ -1271,7 +1331,7 @@ a
 
 .footer-rights
   width 228px
-  margin-right 161px
+  margin-right 157px
 
 .socials
   margin-right 116px
