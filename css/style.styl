@@ -51,6 +51,8 @@ $color-50 = rgb(181, 181, 181)
 $color-51 = rgba(0, 0, 0, .3)
 $color-52 = rgb(255, 255, 255)
 $color-53 = rgb(238, 54, 67)
+$color-54 = #b52933
+$color-55 = #eaeaea
 
 html
   box-sizing border-box
@@ -132,7 +134,6 @@ html
 .top-row
   background $color-02
   font-size 17px
-  text-transform capitalize
   .container
     display flex
 
@@ -147,14 +148,16 @@ html
   &:active
     background-color $color-21
   img
-    padding 11px 55px
+    padding 16px 55px 0
     width 220px
 
 .logo-top:after
   content ''
   position absolute
+  width 100%
+  height 5px
   top 100%
-  box-shadow inset 0 -5px 0 $color-05
+  box-shadow inset 0 -5px 0 $color-54
 
 a
   color $color-01
@@ -194,8 +197,9 @@ a
 .search-icon:hover > svg
   fill $color-52
 
-.search:focus-within > svg
-  fill $color-04
+.search
+  input:focus + label > svg
+    fill $color-04
 
 .bookmarks, .cart
   display flex
@@ -208,6 +212,10 @@ a
     background-color $color-22
   span
     margin-left 5px
+
+.catalog
+  .cart
+    background-color $color-04
 
 .bookmark-icon, .cart-icon, span
   position relative
@@ -259,7 +267,7 @@ a
     background-color $color-24
 
 .middle-row
-  padding 41px 0 44px
+  padding 41px 0 39px
 
 .slogan, .address, .authorization
   display inline-block
@@ -435,27 +443,28 @@ a
   margin 0
 
 .navigation-item
-  display flex
-  justify-content center
-  flex-grow 1
   list-style none
   &:hover
     background-color $color-02
   &:active
     background-color $color-26
 
+.navigation-item:first-child
+  padding 0 5px 0 19px
+
 .navigation-link
-  padding 22px 33px
+  display block
+  padding 20px 27px 22px 33px
 
 .categories
-  margin-top 59px
+  margin-top 60px
   .container
     display flex
 
 .left-column
   position relative
   .categories-item
-    margin-right 17px
+    margin-right 18px
   .flag-item
     left 239px
 
@@ -523,14 +532,14 @@ a
     font-size 36px
     line-height 36px
     text-transform uppercase
-    margin-bottom 3px
+    margin-bottom 0
   p
     font-size 18px
     line-height 24px
     color $color-01
-    margin-bottom 126px
+    margin-bottom 134px
   .btn
-    padding 14px 45px
+    padding 12px 47px
 
 .perf
   height 266px
@@ -615,7 +624,7 @@ a
   margin-right 14px
 
 .content-title
-  padding 32px 0 34px 28px
+  padding 28px 0 34px 28px
   background-color $color-32
   color $color-06
   font-size 30px
@@ -625,7 +634,7 @@ a
 
 .catalog-filter
   display flex
-  margin-top 20px
+  margin-top 9px
 
 .aside
   margin-right 21px
@@ -641,16 +650,16 @@ a
     font-size 13px
     font-family "PT-Sans"
     line-height 18px
-    margin-top 55px
+    margin-top 41px
     border 1px solid $color-30
     background-color $color-01
-    padding 12px 39px
+    padding 13px 37px
     text-transform uppercase
     cursor pointer
 
 .filter
-  padding 14px 0 15px 19px
-  margin 0 0 20px
+  padding 15px 0 12px 19px
+  margin 0 0 5px
   font-size 13px
   font-family "PT-Sans"
   font-weight normal
@@ -659,17 +668,20 @@ a
 
 .choose-filter-range
   border none
-  border-bottom 1px solid
+  border-bottom 1px solid $color-30
   padding 0
+  margin 0
+  legend
+    padding 7px 0
 
 .range-filter
-  margin 21px 0 25px
+  margin 6px 0 25px
   width 220px
   box-sizing content-box
 
 .range-controls
   position relative
-  margin-bottom 9px
+  margin-bottom 8px
   padding 39px 20px
   background-color $color-33
   border-radius 5px
@@ -713,19 +725,25 @@ a
 
 .choose-filter-checkbox
   border none
-  border-bottom 1px solid
+  border-bottom 1px solid $color-30
   padding 0
-  margin-top 25px
+  margin 12px 0
+  legend
+    padding 2px 0
 
 .choose-filter-radio
   border none
   padding 0
-  margin-top 25px
+  margin 13px 0
+  legend
+    padding 8px 0
+  .choose-filter-list
+    margin 6px 0 0
 
 .choose-filter-list
   list-style none
   padding-left 0
-  margin 20px 0 0
+  margin 12px 0 0
 
 .choose-filter-item
   label
@@ -748,10 +766,13 @@ a
   left 0
   background-position 0 0
 
+.filter-input-checkbox:checked+label:before
+  display none
+
 .filter-input-checkbox:checked+label:after
   content ''
   position absolute
-  width 23px
+  width 27px
   height 23px
   background url('../img/checkbox-on.svg') no-repeat
   top 0
@@ -782,7 +803,7 @@ a
 
 .sort
   display flex
-  margin-bottom 21px
+  margin-bottom 16px
   background-color $color-33
   font-size 13px
   font-family "PT-Sans"
@@ -791,7 +812,7 @@ a
 
 .sort-to
   margin 0
-  padding 14px 139px 15px 18px
+  padding 16px 139px 12px 18px
 
 .sort-list
   width 355px
@@ -835,14 +856,14 @@ a
 /* catalog styles end */
 
 .products
-  margin-top 33px
+  margin-top 30px
 
 .popular-header
   background-color $color-15
-  margin-bottom 20px
+  margin-bottom 18px
   .popular-title
     margin 0 auto
-    padding 33px 330px 0 28px
+    padding 35px 330px 0 28px
     color $color-06
     font-size 30px
     font-weight normal
@@ -851,13 +872,13 @@ a
     display inline-block
     vertical-align top
   .btn
-    margin 25px 24px 26px 41px
-    padding 12px 55px
+    margin 29px 24px 26px 41px
+    padding 15px 55px 11px
     display inline-block
   .second-title
     padding 33px 226px 30px 28px
   .second-btn
-    padding 12px 69px
+    padding 10px 69px
 
 .goods, .catalog
   display flex
@@ -865,7 +886,7 @@ a
 
 .goods-item
   width 220px
-  margin-bottom 20px
+  margin-bottom 17px
   display flex
   position relative
   flex-direction column
@@ -873,6 +894,7 @@ a
   font-family "PT-Sans"
   font-weight bold
   line-height 18px
+  border 1px solid $color-30
   &:hover
     box-shadow 0 10px 25px $color-27
   &:hover > .hidden
@@ -881,8 +903,11 @@ a
     a, button
       width 135px
       margin-bottom 7px
-      padding 14px 0
+      padding 12px 0 9px 10px
       text-align center
+  img
+    width 217px
+    height 170px
   .title, .old-price, .price
     margin 0 auto
   .title
@@ -890,16 +915,17 @@ a
     font-size 18px
     line-height 20px
     text-align center
-    padding 12px 31px 18px
+    padding 9px 30px 7px
   .old-price
     color $color-16
     text-transform uppercase
+    margin 1px auto
   .price
     color $color-01
     text-transform uppercase
     background url('../img/btn_copy_14.svg') no-repeat
-    padding 11px 40px 13px 36px
-    margin 13px 36px 21px 43px
+    padding 11px 38px 13px 36px
+    margin 13px 36px 16px 43px
 
 .goods-item:nth-child(4),
 .goods-item:nth-child(7),
@@ -917,9 +943,9 @@ a
     margin-left 19px
 
 .hidden
-  width 220px
+  width 217px
   position absolute
-  padding 44px 41px 31px
+  padding 44px 41px 20px
   display none
   font-size 14px
   font-family "Cuprum"
@@ -948,8 +974,8 @@ a
   .buy:before
     content ''
     position absolute
-    top 14px
-    left 13px
+    top 10px
+    left 15px
     width 15px
     height 15px
     background url('../img/icon-cart.svg') no-repeat
@@ -964,7 +990,7 @@ a
   position absolute
   width 60px
   height 59px
-  left 160px
+  left 159px
   z-index 1
 
 .manufacturers
@@ -975,6 +1001,8 @@ a
 .manufacturers-item
   width 220px
   list-style none
+  border 1px solid $color-55
+  margin-bottom 22px
   &:hover
     box-shadow 0 10px 25px $color-27
   &:active
@@ -1010,21 +1038,23 @@ a
   font-size 14px
   font-family "PT-Sans"
   line-height 24px
+  margin-top 57px
 
 .service-title
   width 554px
-  padding-top 68px
+  padding-top 67px
   margin-bottom 28px
   h3
-    margin-bottom 35px
+    margin-bottom 25px
     font-size 30px
     font-family "Cuprum"
     font-weight normal
     line-height 30px
     text-transform uppercase
   p
-    width 448px
+    width 411px
     margin 0
+    font-size 13px
 
 .service-wrapper
   display flex
@@ -1033,7 +1063,7 @@ a
 .service-tab-nav
   position relative
   padding 0
-  padding-top 47px
+  padding-top 36px
   list-style none
   margin 0 80px 52px 0
   width 240px
@@ -1048,7 +1078,7 @@ a
       box-shadow 0 1px 0 $color-01, inset 0 1px 0 $color-01
       background-color $color-01
   a
-    padding 21px 0 20px 22px
+    padding 21px 0 14px 22px
     &:active
       color $color-06
   .service-nav-item
@@ -1073,15 +1103,14 @@ a
   position absolute
   content ''
   display block
-  top 20px
+  top 0
   right 0
   width 10px
   height 279px
-  opacity 0.25
-  background-color $color-41
+  background-image url('../img/Layer_118_copy.png')
 
 .service-tab-content
-  padding-top 48px
+  padding-top 41px
   width 100%
   h3
     font-size 36px
@@ -1089,12 +1118,12 @@ a
     line-height 36px
     font-weight normal
     text-transform uppercase
-    margin-bottom 33px
+    margin-bottom 23px
 
 .service-tab-item
   display none
   width 100%
-  padding-bottom 120px
+  padding-bottom 128px
 
 .active
   display block
@@ -1111,7 +1140,7 @@ a
 
 .service-tab-delivery
   background url('../img/Layer_131.png') no-repeat
-  background-position top 21px right 1px
+  background-position top 23px right 1px
 
 .service-tab-guarantee
   background url('../img/Layer_130.png') no-repeat
@@ -1124,21 +1153,21 @@ a
     padding 14px 44px
 
 .about
-  margin 82px 0 86px
+  margin 74px 0 85px
   h2
     font-size 30px
     line-height 30px
     font-weight normal
     text-transform uppercase
-    margin 0 0 35px
+    margin 6px 0 27px
   .text
     font-size 13px
     font-family "PT-Sans"
     line-height 24px
-    margin-bottom 35px
+    margin-bottom 24px
     width 519px
   .text:nth-child(3)
-    margin 0 0 28px
+    margin 0 0 25px
     width 400px
   .container
     display flex
@@ -1150,7 +1179,7 @@ a
   margin-right 119px
   .btn
     padding 14px 40px 12px
-    margin-top 13px
+    margin-top 20px
     width 220px
 
 .partners
@@ -1178,7 +1207,7 @@ a
   flex-direction column
   .text
     width 180px
-    margin 0 0 35px
+    margin 0 0 28px
   .btn
     padding 14px 59px 12px 63px
     margin-top 40px
@@ -1193,6 +1222,7 @@ a
   font-family "PT-Sans"
   line-height 9px
   color $color-01
+  margin 22px 0 45px
 
 .pager-list
   display flex
@@ -1202,19 +1232,20 @@ a
 
 .pager-item
   margin-right 8px
-  border 1px solid $color-30
-  background-color $color-01
-  display flex
   .pager-item-link
+    border 1px solid $color-30
+    background-color $color-01
+    display flex
     padding 14px 15px
     font-size 13px
     font-family "PT-Sans"
     color $color-07
     text-transform uppercase
-  &:hover
-    border 1px solid $color-31
-  &:active
-    border 1px solid $color-04
+    border-radius 2px
+    &:hover
+      border 1px solid $color-31
+    &:active
+      border 1px solid $color-04
   .current
     background-color $color-04
     color $color-01
@@ -1224,14 +1255,14 @@ a
     padding 14px 32px
 
 .about-puncher
-  padding 67px 0 73px
+  padding 67px 0
   background-color $color-29
   h3
     font-size 30px
     line-height 30px
     font-weight normal
     text-transform uppercase
-    margin-bottom 37px
+    margin-bottom 26px
   p
     font-size 13px
     font-family "PT-Sans"
@@ -1252,22 +1283,24 @@ a
   width 220px
   padding 20px 41px 25px
   margin-right 164px
-  display inline-flex
+  display inline-block
+  vertical-align top
 
 .footer-nav
   list-style none
   padding-left 0
   display inline-flex
   margin 0
-  a
-    color $color-18
-    &:hover
-      text-decoration underline
-    &:active
-      opacity 0.5
+
+.footer-nav-link
+  color $color-18
+  &:hover
+    text-decoration underline
+  &:active
+    opacity 0.5
 
 .footer-nav-item
-  padding 25px 30px 13px
+  padding 38px 30px 0
 
 .footer-nav-item:first-child
   padding-left 0
@@ -1277,7 +1310,7 @@ a
 
 .footer-middle-row
   color $color-03
-  margin 32px 0 53px
+  margin 22px 24px 49px 22px
 
 .footer-address
   display inline-flex
@@ -1317,6 +1350,7 @@ a
     color $color-01
   a
     color $color-19
+    margin-top -6px
     &:hover
       text-decoration underline
     &:active
@@ -1332,14 +1366,15 @@ a
 
 .footer-rights
   width 228px
-  margin-right 157px
+  margin 0 158px 0 1px
+  line-height 18px
 
 .socials
-  margin-right 116px
+  margin-right 111px
 
 .feedback
   width 135px
-  margin-right 53px
+  margin-right 49px
 
 .developed
   width 96px
@@ -1376,6 +1411,7 @@ a
 /* send form start */
 
 .popup-write-us
+  display none
   width 620px
   border-top 7px solid $color-04
   box-shadow 0 20px 40px $color-36
@@ -1437,6 +1473,7 @@ a
 /* cart popup start */
 
 .cart-popup
+  display none
   width 620px
   border-top 7px solid $color-04
   box-shadow 0 20px 40px $color-27
