@@ -8,7 +8,7 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="css/normalize.css" />
-    <link rel="stylesheet" href="css/style-min.css" />
+    <link rel="stylesheet" href="css/style.css" />
   </head>
   <body>
     <header class="main-header">
@@ -413,12 +413,10 @@
       <section class="section-services section-gray">
         <div class="container">
           <h2>Сервисы</h2>
-          <div class="services-description">
-            <p>
-              Хороший интернет-магазин отличается от плохого не только ценами!
-              Мы стараемся изо всех сил, чтобы сделать ваши покупки приятными.
-            </p>
-          </div>
+          <p class="services-description">
+            Хороший интернет-магазин отличается от плохого не только ценами! Мы
+            стараемся изо всех сил, чтобы сделать ваши покупки приятными.
+          </p>
           <div class="columns">
             <input
               class="visually-hidden"
@@ -488,23 +486,21 @@
       </section>
       <div class="columns container">
         <section class="section-about">
-          <div>
-            <h2>Компания «Техномарт»</h2>
-            <p>
-              Настоящий мужской шоппинг начинается здесь! Огромный выбор товаров
-              для ремонта и строительства не оставит равнодушными любителей
-              сэкономить на гастарбайтерах.
-            </p>
-            <p>
-              Мы можем доставить ваш товар в самые отдаленные точки России!<br />
-              Техномарт работает со многими транспортными компаниями:
-            </p>
-            <ul class="list-marker">
-              <li>Деловые линии</li>
-              <li>Автотрейдинг</li>
-              <li>ЖелДорЭкспедиция</li>
-            </ul>
-          </div>
+          <h2>Компания «Техномарт»</h2>
+          <p>
+            Настоящий мужской шоппинг начинается здесь! Огромный выбор товаров
+            для ремонта и строительства не оставит равнодушными любителей
+            сэкономить на гастарбайтерах.
+          </p>
+          <p>
+            Мы можем доставить ваш товар в самые отдаленные точки России!
+            Техномарт работает со многими транспортными компаниями:
+          </p>
+          <ul class="list-marker">
+            <li>Деловые линии</li>
+            <li>Автотрейдинг</li>
+            <li>ЖелДорЭкспедиция</li>
+          </ul>
           <a href="" class="btn-about btn">Подробнее о компании</a>
         </section>
         <section class="section-contacts">
@@ -568,8 +564,7 @@
       </div>
       <div class="footer-bottom container">
         <p class="copyright">
-          &copy; 2010–2019 Компания «Техномарт»<br />
-          Все права защищены
+          &copy; 2010–2019 Компания «Техномарт» Все права защищены
         </p>
         <ul class="social-links-list">
           <li>
@@ -658,6 +653,21 @@
           <button class="btn" type="submit">Отправить</button>
         </div>
       </form>
+      <button class="btn-popup-close" type="button">
+        <span class="visually-hidden">Закрыть окно</span>
+      </button>
+    </section>
+    <section class="popup-basket popup">
+      <h2 class="visually-hidden">Товар в корзине</h2>
+      <div class="popup-content">
+        <p class="popup-msg popup-msg-good">
+          Товар добавлен в корзину!
+        </p>
+      </div>
+      <div class="popup-buttons">
+        <a href="" class="btn width-half">Оформить заказ</a>
+        <a href="" class="btn btn-white width-half">Продолжить покупки</a>
+      </div>
       <button class="btn-popup-close" type="button">
         <span class="visually-hidden">Закрыть окно</span>
       </button>

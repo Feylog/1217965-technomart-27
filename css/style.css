@@ -1430,6 +1430,10 @@ textarea:focus {
   width: 300px;
 }
 
+.section-about p:nth-child(3) {
+  padding-right: 93px;
+}
+
 .section-about p,
 .section-contacts p {
   margin-bottom: 20px;
@@ -1616,8 +1620,8 @@ textarea:focus {
   background-color: #d7dcde;
 }
 
-.price-bulit-min,
-.price-bulit-max {
+.price-min,
+.price-max {
   position: absolute;
 
   width: 20px;
@@ -1644,11 +1648,11 @@ textarea:focus {
   background-color: #00ca74;
 }
 
-.price-bulit-min {
+.price-min {
   left: 0;
 }
 
-.price-bulit-max {
+.price-max {
   right: 20px;
 }
 
@@ -1999,7 +2003,7 @@ textarea:focus {
 
 .copyright {
   width: 270px;
-
+  padding-right: 25px;
   margin: 0;
 }
 
@@ -2286,7 +2290,6 @@ textarea:focus {
 .popup-feedback {
   width: 620px;
   height: 430px;
-
   margin-top: -215px;
   margin-left: -310px;
 }
@@ -2295,30 +2298,29 @@ textarea:focus {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
-
   padding-top: 45px;
   padding-bottom: 10px;
 }
 
 .form-feedback label {
   display: block;
-
   width: 100%;
-
-  margin-bottom: 20px;
+  margin-bottom: 19px;
 }
 
 .form-feedback input {
   width: 100%;
-
   margin-top: 5px;
 }
 
 .feedback-message {
   width: 100%;
-  height: 114px;
+  height: 112px;
+  margin-top: 6px;
+  padding: 9px 0 0 13px;
 }
 
 .form-feedback .btn {
   width: 100%;
+  margin-top: -14px;
 }
